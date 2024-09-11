@@ -1,25 +1,23 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { writable, type Writable } from 'svelte/store';
-	// import IconMoon from '~icons/line-md/moon-filled-loop';
-	import IconEarth from '~icons/solar/earth-bold-duotone';
-	import IconSun from '~icons/solar/sun-bold-duotone';
-	import IconMoon from '~icons/solar/moon-bold-duotone';
+	import IconSun from '~icons/line-md/moon-filled-to-sunny-filled-loop-transition';
+	import IconMoon from '~icons/line-md/sunny-filled-loop-to-moon-filled-loop-transition';
 
 	let theme: Writable<string>;
 	let isDarkMode: boolean;
 
 	onMount(() => {
-		// Initialize store.
+		// Initialize theme in store.
 		theme = writable(localStorage.theme || 'light');
 
-		// Initialize `localStorage` and DOM.
-		updateTheme($theme);
+		// Initialize theme in DOM.
+		document.documentElement.setAttribute('data-theme', $theme);
 
 		// When theme changes, update `localStorage` and DOM.
 		theme.subscribe(updateTheme);
 
-		// Initialize toggle state.
+		// Initialize checkbox state.
 		isDarkMode = $theme === 'dark';
 	});
 
@@ -31,16 +29,18 @@
 	}
 </script>
 
-<IconEarth />
-<IconMoon />
-<input type="checkbox" class="checkbox" bind:checked={isDarkMode} />
+<label class="relative inline-grid cursor-pointer place-content-center">
+	<!-- Hidden checkbox controls state -->
+	<input
+		type="checkbox"
+		class="appearance-none"
+		bind:checked={isDarkMode}
+		aria-label="Toggle dark mode"
+	/>
 
-<!-- <IconEarth class="pointer-events-none fixed bottom-0 left-0 z-10 size-[50vh]" />
-<div
-	class="pointer-events-none fixed right-0 top-0 z-20 flex h-[200dvh] w-[200vw] flex-col justify-between transition-transform"
-	class:rotate-0={!isDarkMode}
-	class:rotate-180={isDarkMode}
->
-	<IconSun class="size-[30vh] self-end {isDarkMode ? 'opacity-0' : 'opacity-100'}" />
-	<IconMoon class="size-[30vh] -scale-100 self-start {isDarkMode ? 'opacity-100' : 'opacity-0'}" />
-</div> -->
+	{#if isDarkMode}
+		<IconMoon class="size-6" />
+	{:else}
+		<IconSun class="size-6" />
+	{/if}
+</label>

@@ -8,7 +8,6 @@
 	import { navigating } from '$app/stores';
 	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
 	import MenuButton from '$lib/components/MenuButton.svelte';
-	import Network from '$lib/components/Network.svelte';
 
 	let width: number;
 	let height: number;
@@ -48,20 +47,6 @@
 			}, 300),
 		);
 	});
-
-	import IconNpm from '~icons/catppuccin/npm';
-	import IconSvelte from '~icons/catppuccin/svelte';
-	import IconJs from '~icons/catppuccin/javascript';
-	import IconTs from '~icons/catppuccin/typescript';
-	import IconRust from '~icons/catppuccin/rust';
-	import IconC from '~icons/catppuccin/c';
-	import IconCpp from '~icons/catppuccin/cpp-header';
-	import IconPython from '~icons/catppuccin/python';
-	import IconBash from '~icons/catppuccin/bash';
-	import IconNix from '~icons/catppuccin/nix';
-	import IconHtml from '~icons/catppuccin/html';
-	import IconCss from '~icons/catppuccin/css';
-	import IconTailwind from '~icons/catppuccin/tailwind';
 </script>
 
 <svelte:window bind:innerWidth={width} bind:innerHeight={height} />
@@ -91,22 +76,20 @@
 
 <div class="my-10 mr-10 flex items-start justify-stretch gap-10">
 	<!-- Introduction -->
-	<div class="prose z-10">
-		<h1 class="ml-8">
+	<div
+		class="prose z-10 w-96 rounded-box rounded-l-none border-2 border-l-0 border-base-200 bg-base-100 p-8"
+	>
+		<h1>
 			Hi! I'm Winston.
 			<br />
 			(they/them)
 		</h1>
 
-		<div
-			class="z-10 w-96 rounded-box rounded-l-none border-2 border-l-0 border-base-200 bg-base-100 p-8"
-		>
-			I'm a freshman studying CS @ UC Irvine. I enjoy development in a variety of fields, including
-			web and programming language design. If you're looking for someone who subsists off of
-			learning and whose lifeblood is programming, I'm your person!
+		I'm a freshman studying CS @ UC Irvine. I enjoy development in a variety of fields, including
+		web and programming language design. If you're looking for someone who subsists off of learning
+		and whose lifeblood is programming, I'm your person!
 
-			<enhanced:img src="$lib/assets/portrait.jpg" alt="My face" />
-		</div>
+		<enhanced:img src="$lib/assets/portrait.jpg" alt="My face" />
 	</div>
 
 	<!-- Svelte transitions don't play nice with MPAs, and View Transition API doesn't have a way to exclude elements, so I'm doing this -->
@@ -121,59 +104,36 @@
 	{/if}
 </div>
 
-<div class="fixed inset-0 z-10 grid place-items-center">
-	<!-- Background candidate 1: network -->
-	<!-- <Network /> -->
-	<!-- Background candidate 2: toolchains -->
-	<div class="sliding grid scale-[2] grid-cols-[repeat(38,1fr)] gap-2">
-		{#each Array(100) as _}
-			<IconNpm />
-			<IconRust />
-			<IconSvelte />
-			<IconHtml />
-			<IconJs />
-			<IconBash />
-			<IconPython />
-			<IconTailwind />
-			<IconNix />
-			<IconTs />
-			<IconCss />
-			<IconC />
-			<IconCpp />
-		{/each}
-	</div>
-</div>
-
 <style lang="postcss">
 	:global(html) {
 		@apply overflow-x-hidden overflow-y-scroll transition-colors;
-
-		&[data-theme='light'] {
-			/* @apply bg-base-100; */
-		}
 
 		&[data-theme='dark'] {
 			@apply bg-neutral;
 		}
 
-		/* Background candidate 3: grid */
-		/* background-size: 40px 40px; */
-		/* background-position: 23px 23px; */
-		/* background-image: linear-gradient(to right, oklch(var(--bc) / 0.1) 2px, transparent 1px),
-			linear-gradient(to bottom, oklch(var(--bc) / 0.1) 2px, transparent 1px); */
-		/* background-image: radial-gradient(circle, oklch(var(--bc)) 2px, transparent 1px); */
+		/* The first url is the Svelte logo recolored red. */
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 16 16'%3E%3Cg fill='none' stroke='%23ed8796' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12.86 6.72s1.39-1.98.08-3.87C11.286.763 9.44 1.6 9.44 1.6S6.15 3.35 4.33 4.59c-1.4 1-2.24 2.26-1.03 4.37c1.22 2.1 4.58 1.21 4.58 1.21'/%3E%3Cpath d='M3.14 9.28s-1.39 1.98-.08 3.87c1.31 1.9 3.5 1.24 3.5 1.24s3.29-1.74 5.11-2.98c1.4-1 2.24-2.26 1.03-4.37c-1.22-2.1-4.58-1.21-4.58-1.21M6.3 6.96l4.14-2.56m-4.92 7.25L9.66 9.1'/%3E%3C/g%3E%3C/svg%3E"),
+			url('https://api.iconify.design/catppuccin/rust.svg'),
+			url('https://api.iconify.design/catppuccin/html.svg'),
+			url('https://api.iconify.design/catppuccin/javascript.svg'),
+			url('https://api.iconify.design/catppuccin/python.svg'),
+			url('https://api.iconify.design/catppuccin/bash.svg'),
+			url('https://api.iconify.design/catppuccin/tailwind.svg'),
+			url('https://api.iconify.design/catppuccin/nix.svg'),
+			url('https://api.iconify.design/catppuccin/typescript.svg'),
+			url('https://api.iconify.design/catppuccin/c.svg'),
+			url('https://api.iconify.design/catppuccin/cpp-header.svg');
+		background-position-x: 0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%;
+		background-size: 5vw 10vw;
+		background-repeat: repeat-y;
+
+		animation: slide 60s infinite linear;
 	}
 
 	@keyframes slide {
-		from {
-			transform: translate(0 0);
-		}
 		to {
-			transform: translate(100px 100px);
+			background-position-y: 100%;
 		}
-	}
-
-	.sliding {
-		animation: slide 1s infinite;
 	}
 </style>

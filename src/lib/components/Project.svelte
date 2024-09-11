@@ -25,10 +25,10 @@
 
 		<div class="card-actions">
 			{#each fields as field}
-				<div class="badge badge-primary">{field}</div>
+				<div class="badge badge-primary text-primary-content">{field}</div>
 			{/each}
 			{#each tools as tool}
-				<div class="badge badge-secondary">{tool}</div>
+				<div class="badge badge-secondary text-secondary-content">{tool}</div>
 			{/each}
 		</div>
 	</div>

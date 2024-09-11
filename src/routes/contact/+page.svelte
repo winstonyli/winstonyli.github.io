@@ -1,48 +1,35 @@
 <script lang="ts">
 	import IconEmail from '~icons/line-md/email';
-	import IconLocation from '~icons/line-md/my-location';
+	import IconGithub from '~icons/line-md/github';
+	import IconInstagram from '~icons/line-md/instagram';
+	import IconLinkedin from '~icons/line-md/linkedin';
 </script>
 
 <div class="prose">
 	<h1>Contact</h1>
-</div>
 
-<div class="divider" />
+	<div class="divider" />
 
-<div class="grid grid-cols-2 gap-y-6">
-	<div>
-		<IconEmail class="inline align-text-top" />
-		<h2 class="inline font-bold">Email</h2>
+	<p>
+		Feel free to reach me at <a href="mailto:liwy3@uci.edu">liwy3@uci.edu</a> or through another method
+		listed below!
+	</p>
+
+	<div class="flex gap-3">
+		<a href="mailto:liwy3@uci.edu">
+			<IconEmail />
+		</a>
+
+		<a href="https://github.com/winstonyli">
+			<IconGithub />
+		</a>
+
+		<a href="https://www.instagram.com/winstonyli">
+			<IconInstagram />
+		</a>
+
+		<a href="https://www.linkedin.com/in/winstonyli">
+			<IconLinkedin />
+		</a>
 	</div>
-	<p>wli24.personal@gmail.com</p>
-
-	<div>
-		<IconLocation class="inline align-text-top" />
-		<h2 class="inline font-bold">Location</h2>
-	</div>
-	<p>Irvine, CA</p>
 </div>
-
-<!-- <div>
-	<table class="table">
-		<tbody>
-			<tr class="hover">
-				<th><IconEmail class="inline align-text-top" /></th>
-				<th>Email</th>
-				<td>wli24.personal@gmail.com</td>
-			</tr>
-
-			<tr class="hover">
-				<th><IconLocation class="inline align-text-top" /></th>
-				<th>Location</th>
-				<td>Irvine, CA</td>
-			</tr>
-
-			<tr class="hover">
-				<th>3</th>
-				<td>Brice Swyre</td>
-				<td>Tax Accountant</td>
-			</tr>
-		</tbody>
-	</table>
-</div> -->

@@ -1,5 +1,12 @@
 <div class="prose">
 	<h1>Resume</h1>
+
+	<div class="divider" />
+
+	<p>
+		My resume is still in its very early stages, so if you have any suggestions and/or advice, I
+		would appreciate it a lot if you <a href="/contact">contact</a>ed me! :)
+	</p>
 </div>
 
 <iframe
