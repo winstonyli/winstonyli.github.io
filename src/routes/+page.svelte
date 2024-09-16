@@ -1,15 +1,18 @@
-<script>
+<script lang="ts">
+	import IconCat from '~icons/line-md/github-loop';
 </script>
 
 <div class="prose">
-	<h1>About this website</h1>
+	<h1>Welcome to my website!</h1>
 
 	<div class="divider" />
 
+	<IconCat class="inline size-40 w-full" />
+
 	<p>
-		Welcome to my website! Feel free to check out my
+		Here's the GitHub cat as a quasi-maneki-neko. Feel free to check out my
 		<a href="/resume">resume</a>, <a href="/projects">projects</a>, <a href="/contact">contact</a> me,
-		or browse through my website on your own.
+		or browse through my website on your own!
 	</p>
 
 	<h2>Libraries and tools used</h2>
@@ -20,17 +23,4 @@
 		<li><a href="https://daisyui.com">DaisyUI</a></li>
 		<li><a href="https://github.com/unplugin/unplugin-icons">unplugin-icons</a></li>
 	</ul>
-
-	<h2>Some notes</h2>
-
-	<p>
-		The aspect of this website I had the most fun implementing was the page transitions. They might
-		not be the flashiest, but given how janky they were at first, I'm happy with how clean they
-		turned out (both visually and in the "clean code" sense).
-	</p>
-
-	<p>
-		One thing I'm definitely <span class="italic">not</span> happy with as of now is the background.
-		I originally had a (manually implemented) directed force graph kinda just floating there,
-	</p>
 </div>
