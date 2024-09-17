@@ -1,18 +1,24 @@
-name: Deploy SvelteKit to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  # Deploy on push to main
+  # Deploy on push to main...
   push:
     branches: [main]
 
-  # Allow manual deployment
+  # ...or manually.
   workflow_dispatch:
 
-# Grant GITHUB_TOKEN permissions needed for deployment to Pages
+# Grant GITHUB_TOKEN permissions needed for deployment to Pages.
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Skip runs queued between currently running & latest queued.
+# Don't cancel in-progress runs.
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -44,13 +50,13 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
 
-    # Deploy to github-pages environment
+    # Deploy to github-pages environment.
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-      - uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4
