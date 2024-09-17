@@ -10,14 +10,14 @@
 
 	<p>
 		Since my resume is in constant flux currently, I'm embedding the Google Doc for now, which syncs
-		every ~5 minutes but has slight layout differences.
+		every ~5 minutes but has layout differences (especially on smaller screen sizes).
 	</p>
 </div>
 
 <iframe
 	src="https://docs.google.com/document/d/1E7f0YB5z8q4CF32OmkRTtEbdtlM7ERNptxDoI9RuE2o/pub?embedded=true"
 	title="Resume"
-	class="aspect-[8.5/11] w-[51rem]"
+	class="aspect-[8.5/11] max-w-[51rem] lg:w-[51rem]"
 />
 
 <!-- When my resume is more stabilized, consider using `embed`: -->

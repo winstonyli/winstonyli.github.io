@@ -16,7 +16,7 @@
 			title: 'Renno',
 			date: 'Spring 2023',
 			blurb:
-				'My first language with a complete compiler pipeline: lexing, pratt parsing, lexical scope resolution, static type checking, multi-stage lowering, a transpile-to-JS backend, and error reporting.',
+				'My first language with a complete compiler pipeline, including lexing, pratt parsing, lexical scope resolution, static type checking, multi-stage lowering, a transpile-to-JS backend, and error reporting.',
 			fields: ['Compiler', 'Web'],
 			tools: ['Rust', 'Svelte', 'JavaScript/TypeScript'],
 		},
@@ -35,7 +35,7 @@
 			href: 'https://hooliganism.vercel.app',
 			date: 'Winter 2024',
 			blurb:
-				'A punk rock lyric generator. Powered by DuckDuckGo and OpenAI APIs. Built in ~3 days for a school project, very loosely interpreting the directions "create lyrics for... and artistically represent... a punk song."',
+				'A punk rock lyric generator. Powered by DuckDuckGo and OpenAI APIs. Built in ~3 school days for a school project, very loosely interpreting the directions "create lyrics for... and artistically represent... a punk song."',
 			fields: ['AI', 'Web'],
 			tools: ['Svelte', 'JavaScript/TypeScript', 'Vercel'],
 		},
@@ -44,7 +44,7 @@
 			href: 'https://talculator.vercel.app',
 			date: 'Spring 2024',
 			blurb:
-				'A minimal 3-dimensional graphing calculator. Supports multiple color-coded equations and symbolic computation. Warning: there be UI oopsies here.',
+				'A minimal 3-dimensional graphing calculator. Supports multiple color-coded equations and symbolic computation. Warning: UI oopsies lie ahead.',
 			fields: ['3D', 'Web'],
 			tools: ['Three.js', 'Svelte', 'JavaScript/TypeScript', 'Vercel'],
 		},
@@ -61,7 +61,7 @@
 			date: '2024',
 			isWip: true,
 			blurb:
-				'An open-source type-driven library for obtaining League of Legends pro play data via scraping the Leaguepedia wiki. Will include a web demo.',
+				'A type-driven library for obtaining League of Legends pro play data via scraping the Leaguepedia wiki. Will include a web demo.',
 			fields: ['Library'],
 			tools: ['TypeScript', 'SQL'],
 		},

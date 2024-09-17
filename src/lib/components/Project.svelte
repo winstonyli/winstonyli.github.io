@@ -9,17 +9,14 @@
 </script>
 
 <div
-	class="card card-compact border-2 border-base-200 bg-base-100 transition hover:scale-[1.03] hover:shadow-2xl hover:brightness-110 dark:bg-neutral"
+	class="card image-full card-compact border-2 border-base-200 bg-base-100 transition hover:scale-110 hover:shadow-2xl hover:brightness-110 dark:bg-neutral lg:hover:scale-[1.03]"
 >
 	<div class="card-body">
 		<h1 class="card-title">
 			<a {href} class="link-hover link">
 				{title}
-				{#if isWip}(WIP){/if}
+				{#if isWip}(WIP){/if} | {date}
 			</a>
-
-			<div class="divider divider-horizontal" />
-			{date}
 		</h1>
 		<p>{@html blurb}</p>
 
@@ -33,16 +30,14 @@
 		</div>
 	</div>
 
-	<figure>
-		<a {href} class="relative">
-			{#if isWip}
-				<enhanced:img
-					src="$lib/assets/wip.png"
-					alt="Construction tape"
-					class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-				/>
-			{/if}
-			<slot class="absolute" />
-		</a>
+	<figure class="relative">
+		{#if isWip}
+			<enhanced:img
+				src="$lib/assets/wip.png"
+				alt="Construction tape"
+				class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
+			/>
+		{/if}
+		<slot class="absolute" />
 	</figure>
 </div>
