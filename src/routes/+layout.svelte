@@ -79,10 +79,10 @@
 		</nav>
 
 		<!-- Page content -->
-		<div class="my-10 mr-10 flex flex-col items-start justify-stretch gap-10 shadow lg:flex-row">
+		<div class="my-10 mr-10 flex flex-col items-start justify-stretch gap-10 lg:flex-row">
 			<!-- Introduction -->
 			<div
-				class="prose z-10 w-full rounded-box rounded-l-none border-2 border-l-0 border-base-200 bg-base-100 p-8 lg:w-96"
+				class="prose z-10 w-full rounded-box rounded-l-none border-2 border-l-0 border-base-200 bg-base-100 p-8 shadow lg:w-96"
 				class:hidden={$page.route.id !== '/'}
 			>
 				<h1>
@@ -108,7 +108,7 @@
 				<!-- Svelte transitions don't play nice with MPAs, and View Transition API doesn't have a way to exclude elements, so I'm doing this -->
 				{#if !slidingOut}
 					<div
-						class="flex flex-col gap-6 rounded-box border-2 border-base-200 bg-base-100 p-8"
+						class="flex flex-col gap-6 rounded-box border-2 border-base-200 bg-base-100 p-8 shadow"
 						in:fly={{ x: `${direction}00%`, duration: 300 }}
 						out:fly={{ x: `${-direction}00%`, duration: 300 }}
 					>
