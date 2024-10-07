@@ -9,8 +9,11 @@
 	</p>
 
 	<p>
-		Since my resume is in constant flux currently, I'm embedding the Google Doc for now, which syncs
-		every ~5 minutes but has layout differences (especially on smaller screen sizes).
+		Since my resume is still in flux, I'm embedding the Google Doc, which may result in strange
+		layout on smaller screen sizes. If you run into any issues, you can try viewing it <a
+			href="https://docs.google.com/document/d/1E7f0YB5z8q4CF32OmkRTtEbdtlM7ERNptxDoI9RuE2o/pub?embedded=true"
+			>here</a
+		>. Sorry :(
 	</p>
 </div>
 

@@ -3,7 +3,7 @@
 	import IconCat from '~icons/line-md/github-loop';
 </script>
 
-<div class="prose">
+<div class="prose mb-4">
 	<h1>Welcome to my website!</h1>
 
 	<div class="divider" />

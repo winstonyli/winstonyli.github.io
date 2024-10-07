@@ -25,7 +25,7 @@ import wordleverseSrc from '$lib/assets/projects/wordleverse.webp';
 // 	blurb:
 // 		'A proof-of-concept functional language that embraces incremental compilation/computation and effortless concurrency. The culmination of 2+ years of iterative design and many months of development.',
 // 	fields: ['Compiler', 'Web'],
-// 	tools: ['Rust', 'Svelte', 'JavaScript/TypeScript', 'Vercel'],
+// 	tools: ['Rust', 'Svelte', 'TypeScript', 'Vercel'],
 // };
 
 const wordleverse: ComponentProps<Project> = {
@@ -36,7 +36,7 @@ const wordleverse: ComponentProps<Project> = {
 	blurb:
 		'Find the animatronic, monkey, etc. of the day. A collection of LoLdle-esque Wordle clones. Fully statically hosted on Github Pages.',
 	fields: ['Web'],
-	tools: ['Svelte', 'JavaScript/TypeScript'],
+	tools: ['Svelte', 'TypeScript'],
 };
 
 const talculator: ComponentProps<Project> = {
@@ -47,7 +47,7 @@ const talculator: ComponentProps<Project> = {
 	blurb:
 		'A minimal 3-dimensional graphing calculator. Supports multiple color-coded equations and symbolic computation. Warning: UI oopsies lie ahead.',
 	fields: ['3D', 'Web'],
-	tools: ['Three.js', 'Svelte', 'JavaScript/TypeScript', 'Vercel'],
+	tools: ['Three.js', 'Svelte', 'TypeScript', 'Vercel'],
 };
 
 const hooliganism: ComponentProps<Project> = {
@@ -58,7 +58,7 @@ const hooliganism: ComponentProps<Project> = {
 	blurb:
 		'A punk rock lyric generator. Powered by DuckDuckGo and OpenAI APIs. Built in ~3 school days for a school project, very loosely interpreting the directions "create lyrics for... and artistically represent... a punk song."',
 	fields: ['AI', 'Web'],
-	tools: ['Svelte', 'JavaScript/TypeScript', 'Vercel'],
+	tools: ['Svelte', 'TypeScript', 'Vercel'],
 };
 
 const themendingnote: ComponentProps<Project> = {
@@ -69,7 +69,7 @@ const themendingnote: ComponentProps<Project> = {
 	blurb:
 		'An organization dedicated to providing used instruments, music lessons, and jam sessions for socioeconomically-disadvantaged groups in my local community.',
 	fields: ['Web'],
-	tools: ['Svelte', 'JavaScript/TypeScript', 'Vercel'],
+	tools: ['Svelte', 'TypeScript', 'Vercel'],
 };
 
 const renno: ComponentProps<Project> = {
@@ -79,7 +79,7 @@ const renno: ComponentProps<Project> = {
 	blurb:
 		'My first language with a complete compiler pipeline, including lexing, pratt parsing, lexical scope resolution, static type checking, multi-stage lowering, a transpile-to-JS backend, and error reporting.',
 	fields: ['Compiler', 'Web'],
-	tools: ['Rust', 'Svelte', 'JavaScript/TypeScript'],
+	tools: ['Rust', 'Svelte', 'TypeScript'],
 };
 
 export const featured = [wordleverse, talculator, hooliganism, themendingnote];

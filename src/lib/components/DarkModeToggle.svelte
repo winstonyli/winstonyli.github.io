@@ -29,7 +29,7 @@
 	}
 </script>
 
-<label class="relative inline-grid cursor-pointer place-content-center">
+<label class="inline-grid cursor-pointer place-content-center">
 	<!-- Hidden checkbox controls state -->
 	<input
 		type="checkbox"
