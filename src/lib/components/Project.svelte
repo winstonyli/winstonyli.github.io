@@ -1,5 +1,8 @@
 <script lang="ts">
+	import wip from '$lib/assets/wip.webp';
+
 	export let title: string;
+	export let src: string;
 	export let href: string | undefined = undefined;
 	export let date: string;
 	export let isWip = false;
@@ -30,14 +33,11 @@
 		</div>
 	</div>
 
-	<figure class="relative">
+	<figure class="relative grid place-items-center *:[grid-area:1/1]">
 		{#if isWip}
-			<enhanced:img
-				src="$lib/assets/wip.png"
-				alt="Construction tape"
-				class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 object-cover"
-			/>
+			<img src={wip} alt="Construction tape" class="object-cover" />
 		{/if}
-		<slot class="absolute" />
+
+		<img {src} alt={title} class="object-cover" />
 	</figure>
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FeaturedProjects from '$lib/components/FeaturedProjects.svelte';
 	import IconCat from '~icons/line-md/github-loop';
 </script>
 
@@ -15,6 +16,12 @@
 		or browse through my website on your own!
 	</p>
 
+	<h2>Featured projects</h2>
+</div>
+
+<FeaturedProjects />
+
+<div class="prose mt-6">
 	<h2>Libraries and tools used</h2>
 
 	<ul>

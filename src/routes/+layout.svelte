@@ -2,14 +2,19 @@
 	import '../app.css';
 	import '@fontsource/fira-mono';
 	import '@fontsource/fira-sans';
+
 	import { fly } from 'svelte/transition';
 	import type { NavigationTarget } from '@sveltejs/kit';
+
 	import { onNavigate } from '$app/navigation';
 	import { navigating, page } from '$app/stores';
+
 	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
 	import NavButton from '$lib/components/MenuButton.svelte';
 	import Background from '$lib/components/Background.svelte';
 	import IconMenu from '~icons/line-md/menu';
+
+	import portrait from '$lib/assets/portrait.webp';
 
 	let routes = [
 		{ name: 'Home', href: '/' },
@@ -83,7 +88,7 @@
 			<!-- Introduction -->
 			<div
 				class="prose z-10 w-full rounded-box rounded-l-none border-2 border-l-0 border-base-200 bg-base-100 p-8 shadow lg:w-96"
-				class:hidden={$page.route.id !== '/'}
+				class:not:lg:hidden={$page.route.id !== '/'}
 			>
 				<h1>
 					Hi! I'm Winston.
@@ -97,11 +102,7 @@
 					and eager to take on new challenges, I'm your person!
 				</p>
 
-				<enhanced:img
-					src="$lib/assets/portrait.jpg"
-					alt="My face"
-					class="aspect-square rounded object-cover"
-				/>
+				<img src={portrait} alt="My face" class="aspect-square rounded object-cover" />
 			</div>
 
 			<div class="flex flex-1 justify-center">
