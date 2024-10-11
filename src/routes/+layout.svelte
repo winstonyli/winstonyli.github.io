@@ -16,7 +16,9 @@
 	import IconMenu from '~icons/line-md/close-to-menu-transition';
 	import IconClose from '~icons/line-md/menu-to-close-transition';
 
-	let routes = [
+	const TRANSITION_DURATION = 300;
+
+	const routes = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Resume', href: '/resume' },
 		{ name: 'Projects', href: '/projects' },
@@ -39,7 +41,7 @@
 		slidingOut = true;
 
 		return new Promise((res) =>
-			// Delay navigation by 300ms to give time for sliding out
+			// Delay navigation to give time for sliding out
 			setTimeout(() => {
 				res();
 				slidingOut = false;
@@ -47,8 +49,8 @@
 				// Keep `a` tags disabled while sliding in
 				setTimeout(() => {
 					transitioning = false;
-				}, 300);
-			}, 300),
+				}, TRANSITION_DURATION);
+			}, TRANSITION_DURATION),
 		);
 	});
 
@@ -101,7 +103,7 @@
 	</nav>
 
 	<!-- Page content -->
-	<div class="my-10 mr-10 flex flex-col items-start justify-stretch gap-10 lg:flex-row">
+	<div class="m-5 flex flex-col gap-10 lg:m-10 lg:ml-0 lg:flex-row">
 		<!-- About me (desktop, on all routes) -->
 		<div class="hidden lg:block">
 			<AboutMe />
@@ -112,8 +114,8 @@
 			{#if !slidingOut}
 				<!-- About me (mobile, only on root) -->
 				<div
-					in:fly={{ x: `${direction}00%`, duration: 300 }}
-					out:fly={{ x: `${-direction}00%`, duration: 300 }}
+					in:fly={{ x: `${direction}00%`, duration: TRANSITION_DURATION }}
+					out:fly={{ x: `${-direction}00%`, duration: TRANSITION_DURATION }}
 					class="flex flex-col gap-6"
 				>
 					<div class="lg:hidden" class:hidden={$page.route.id !== '/'}>

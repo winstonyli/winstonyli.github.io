@@ -2,25 +2,30 @@
 	import wip from '$lib/assets/wip.webp';
 
 	export let title: string;
-	export let src: string;
-	export let href: string | undefined = undefined;
+	export let src: string = '';
+	export let href: string = '';
 	export let date: string;
-	export let isWip = false;
 	export let blurb: string;
 	export let fields: string[] = [];
 	export let tools: string[] = [];
 </script>
 
 <div
-	class="card image-full card-compact border-2 border-base-200 bg-base-100 transition hover:scale-110 hover:shadow-2xl hover:brightness-110 dark:bg-neutral lg:hover:scale-[1.03]"
+	class="card image-full card-compact border-2 border-base-200 bg-base-100 transition hover:z-10 hover:scale-110 hover:shadow-2xl hover:brightness-110 dark:bg-neutral lg:hover:scale-[1.03]"
 >
 	<div class="card-body">
-		<h1 class="card-title">
-			<a {href} class="link-hover link">
+		<h2 class="card-title">
+			{#if href}
+				<a class="link" {href}>{title}</a>
+			{:else}
 				{title}
-				{#if isWip}(WIP){/if} | {date}
-			</a>
-		</h1>
+			{/if}
+
+			<span
+				class="badge badge-accent badge-lg bg-gradient-to-bl from-accent"
+				class:to-primary={date === 'WIP'}>{date}</span
+			>
+		</h2>
 		<p>{@html blurb}</p>
 
 		<div class="card-actions">
@@ -34,10 +39,12 @@
 	</div>
 
 	<figure class="relative grid place-items-center *:[grid-area:1/1]">
-		{#if isWip}
+		{#if date === 'WIP'}
 			<img src={wip} alt="Construction tape" class="object-cover" />
 		{/if}
 
-		<img {src} alt={title} class="object-cover" />
+		{#if src}
+			<img {src} alt={title} class="object-cover" />
+		{/if}
 	</figure>
 </div>

@@ -9,8 +9,8 @@
 	</p>
 
 	<p>
-		Since my resume is still in flux, I'm embedding the Google Doc, which may result in strange
-		layout on smaller screen sizes. If you run into any issues, you can try viewing it <a
+		The embedded Google Doc may have layout issues on smaller screen sizes. If you run into any
+		issues, you can try viewing it <a
 			href="https://docs.google.com/document/d/1E7f0YB5z8q4CF32OmkRTtEbdtlM7ERNptxDoI9RuE2o/pub?embedded=true"
 			>here</a
 		>. Sorry :(

@@ -17,15 +17,23 @@
 	</p>
 
 	<h2>Featured projects</h2>
+
+	<!-- To maintain proper spacing. -->
+	<p />
 </div>
 
 <FeaturedProjects />
 
 <div class="prose mt-6">
 	<h2>Other projects</h2>
+
+	<p>An (uncurated) list of my... other projects.</p>
+
+	<!-- Same as above. -->
+	<p />
 </div>
 
-<div class="flex flex-col">
+<div class="flex flex-col gap-3">
 	{#each other as project}
 		<Project {...project} />
 	{/each}
