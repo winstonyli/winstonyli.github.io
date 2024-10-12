@@ -22,7 +22,7 @@
 			{/if}
 
 			<span
-				class="badge badge-accent badge-lg bg-gradient-to-bl from-accent"
+				class="badge badge-accent badge-sm border-none bg-gradient-to-bl from-accent lg:badge-md"
 				class:to-primary={date === 'WIP'}>{date}</span
 			>
 		</h2>
@@ -30,10 +30,10 @@
 
 		<div class="card-actions">
 			{#each fields as field}
-				<div class="badge badge-primary text-primary-content">{field}</div>
+				<div class="badge badge-primary badge-sm text-primary-content lg:badge-md">{field}</div>
 			{/each}
 			{#each tools as tool}
-				<div class="badge badge-secondary text-secondary-content">{tool}</div>
+				<div class="badge badge-secondary badge-sm text-secondary-content lg:badge-md">{tool}</div>
 			{/each}
 		</div>
 	</div>

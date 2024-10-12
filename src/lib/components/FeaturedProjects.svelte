@@ -3,7 +3,7 @@
 	import Project from './Project.svelte';
 </script>
 
-<div class="grid gap-3 lg:grid-cols-2 lg:grid-rows-2">
+<div class="grid gap-3 lg:grid-cols-2">
 	{#each featured as project}
 		<Project {...project} />
 	{/each}

@@ -33,7 +33,7 @@
 	<p />
 </div>
 
-<div class="flex flex-col gap-3">
+<div class="grid gap-3 lg:grid-cols-2">
 	{#each other as project}
 		<Project {...project} />
 	{/each}

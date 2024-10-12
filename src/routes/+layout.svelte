@@ -57,7 +57,7 @@
 	let isMenuOpen = false;
 </script>
 
-<div class="flex flex-col">
+<div class="flex min-h-screen flex-col">
 	<!-- Navbar -->
 	<nav class="navbar sticky top-0 z-30 border-b-2 border-base-200 bg-base-100 shadow">
 		<div class="navbar-start ml-6">Winston Li</div>
