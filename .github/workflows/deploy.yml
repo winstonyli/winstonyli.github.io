@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   # Deploy on push to main...
   push:
-    branches: [main]
+    branches: [main, typst-rewrite]
 
   # ...or manually.
   workflow_dispatch:
@@ -34,6 +34,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v3
+
+      - name: Compile resume
+        run: |
+          typst compile static/resume.typ static/resume.pdf
+          typst compile static/resume.typ static/resume.svg
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
