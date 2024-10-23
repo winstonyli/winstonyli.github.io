@@ -10,10 +10,6 @@ Built using:
 
 Also hosts my resume, written in [Typst](https://github.com/typst/typst). If you have any feedback, please let me know! 🙏
 
-## Additional yapping
-
-To be honest, my favorite thing about this website is the page transitions. There were more edge cases to handle than I expected, but it turned out 
-
 ## Next steps
 
 - Disable transitions for reduced motion
