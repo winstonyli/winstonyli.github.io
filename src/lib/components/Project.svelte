@@ -22,7 +22,7 @@
 			{/if}
 
 			<span
-				class="badge badge-accent badge-sm border-none bg-gradient-to-bl from-accent lg:badge-md"
+				class="badge badge-accent badge-sm float-right border-none bg-gradient-to-bl from-accent lg:badge-md"
 				class:to-primary={date === 'WIP'}>{date}</span
 			>
 		</h2>

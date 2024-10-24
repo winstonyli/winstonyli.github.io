@@ -8,9 +8,9 @@
 	<div class="divider" />
 
 	<p>
-		Built in <a href="https://typst.app">Typst</a>! Still in its early stages, so if you have any
-		suggestions and/or advice, I would appreciate it a lot if you
-		<a href="/contact">contact</a>ed me. :)
+		Built in <a href="https://typst.app">Typst</a> and compiled to SVG & PDF using GitHub Actions!
+		Still in its early stages, so if you have any suggestions and/or advice, I would appreciate it a
+		lot if you <a href="/contact">contact</a>ed me. :)
 	</p>
 
 	<p />
@@ -36,7 +36,7 @@
 	>
 		<object
 			title="Resume"
-			class="h-[842px] w-[596px] grow rounded-box p-3"
+			class="aspect-[5/7] w-full rounded-box p-3"
 			data="/resume.pdf"
 			type="application/pdf"
 		>

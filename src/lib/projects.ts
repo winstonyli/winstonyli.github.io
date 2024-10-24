@@ -8,6 +8,14 @@ import wordleverseSrc from '$lib/assets/projects/wordleverse.webp';
 
 export const featured: ComponentProps<Project>[] = [
 	{
+		title: 'Roanluder',
+		date: 'WIP',
+		blurb:
+			'A full-stack League of Legends companion app. Create builds (or yoink from external sources) and automatically import them.',
+		fields: ['CI/CD', 'Database', 'Full-Stack', 'Software', 'UI/UX', 'Web'],
+		tools: ['Firebase', 'Python', 'Rust', 'Svelte', 'TypeScript'],
+	},
+	{
 		title: 'Wordleverse',
 		src: wordleverseSrc,
 		href: 'https://winstonyli.github.io/wordleverse',
@@ -37,6 +45,17 @@ export const featured: ComponentProps<Project>[] = [
 		fields: ['AI', 'UI/UX', 'Web'],
 		tools: ['Svelte', 'TypeScript'],
 	},
+];
+
+export const other: ComponentProps<Project>[] = [
+	{
+		title: 'Renno 2: Electric Boogaloo',
+		date: 'WIP',
+		blurb:
+			'A proof-of-concept functional language that embraces incremental computation and effortless concurrency.',
+		fields: ['Compiler', 'UI/UX', 'Web'],
+		tools: ['Rust', 'Svelte', 'TypeScript'],
+	},
 	{
 		title: 'themendingnote',
 		src: themendingnoteSrc,
@@ -47,33 +66,12 @@ export const featured: ComponentProps<Project>[] = [
 		fields: ['UI/UX', 'Web'],
 		tools: ['Svelte', 'TypeScript'],
 	},
-];
-
-export const other: ComponentProps<Project>[] = [
 	{
-		title: 'Renno 2: Electric Boogaloo',
-		src: '',
-		date: 'WIP',
-		blurb:
-			'A proof-of-concept functional language that embraces incremental compilation/computation and effortless concurrency.',
-		fields: ['Compiler'],
-		tools: ['Rust', 'Svelte', 'TypeScript'],
-	},
-	{
-		title: 'Roanluder',
-		src: '',
-		date: 'WIP',
-		blurb:
-			'A lightweight League of Legends companion app. Create and automatically import builds (or import them from build websites and pro games).',
-		fields: ['Software', 'UI/UX'],
-		tools: ['Rust', 'SQL', 'Svelte', 'TypeScript'],
-	},
-	{
-		title: 'Renno (discontinued)',
+		title: 'Renno',
 		src: rennoSrc,
 		date: "Spring '23",
 		blurb:
-			'My first language with a complete compiler pipeline: lexing, pratt parsing, lexical scope resolution, static type checking, multi-stage lowering, a JS backend, and error reporting. Includes an incomplete web demo.',
+			'My first language with a complete compiler pipeline: lexing, parsing, name resolution, static type checking, multi-stage lowering, a JS backend, error reporting, and an incomplete web demo.',
 		fields: ['Compiler'],
 		tools: ['Rust', 'Svelte', 'TypeScript'],
 	},

@@ -9,8 +9,6 @@
 
 	<div class="divider" />
 
-	<p>An array of projects I'm not (that) ashamed of.</p>
-
 	<p>
 		I'm currently in the process of looking over my old repos to make sure I'm not leaking secrets,
 		so some repos may remain private for the time being.
@@ -18,18 +16,23 @@
 
 	<h2>Featured projects</h2>
 
-	<!-- To maintain proper spacing. -->
+	<p>An array of projects I'm not (that) ashamed of.</p>
+
 	<p />
 </div>
 
 <FeaturedProjects />
 
-<div class="prose mt-6">
+<div class="prose">
+	<p />
+
 	<h2>Other projects</h2>
 
-	<p>An (uncurated) list of my... other projects.</p>
+	<p>
+		An (uncurated) list of my... other projects. Not exactly my best work, but it's fun to record my
+		progress somewhere.
+	</p>
 
-	<!-- Same as above. -->
 	<p />
 </div>
 

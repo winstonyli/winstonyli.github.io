@@ -31,7 +31,6 @@
 	// -1 if moving left, 0 if not moving, 1 if moving right
 	$: direction = Math.sign(indexOf($navigating?.to) - indexOf($navigating?.from));
 
-	// Disable `a` tags while transitioning
 	// Variables for disabling `a` tags while transitioning
 	let transitioning = false;
 	let slidingOut = false;

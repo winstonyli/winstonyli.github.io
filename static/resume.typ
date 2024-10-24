@@ -20,7 +20,7 @@ Passionate 1st-year CS student with experience in full-stack development. Excels
 == Education
 #divider()
 
-*University of California, Irvine* #h(1fr) Sep 2024 -- Jun 2028 (expected) \
+*University of California, Irvine* #h(1fr) Sep 2024 -- Jun 2027 (expected) \
 B.S. in Computer Science
 - Linear Algebra
 - Test-Driven Development
@@ -38,7 +38,7 @@ B.S. in Computer Science
 #divider()
 
 *Roanluder* #h(1fr) 2024 \
-A lightweight, cross-platform companion app for League of Legends. \
+A full-stack companion app for League of Legends. \
 - Building a desktop app that connects to the League of Legends process using *Tauri* (*Rust*, *SvelteKit*, and *JavaScript/TypeScript*).
 - Creating a robust backend that caches scraped data from wikis and other websites using *Python* and *Firebase*.
 - Automated continuous deployment of *Firebase* Cloud Functions using *GitHub Actions*.
@@ -48,16 +48,6 @@ A collection of Wordle clones for various fandoms. \
 - Designed an accessible, mobile-first UI using *SvelteKit* and *JavaScript/TypeScript*.
 - Created components for each Wordle mode to eliminate copy-and-pasted code between clones.
 - Statically hosted Wordleverse on *GitHub Pages*; integrated a third-party PRNG implementation to deterministically choose the "answer of the day."
-
-// *Talculator* | #link("https://winstonyli.github.io/talculator")[winstonyli.github.io/talculator] #h(1fr) 2024 \
-// A simple 3D grapher. \
-// - Designed an accessible, mobile-first UI using *SvelteKit* and *JavaScript/TypeScript*.
-// - Integrated Three.js, MathLive, and Compute Engine for equation rendering, accessible equation input, and symbolic computation.
-
-// *Hooliganism* | #link("https://hooliganism.vercel.app")[hooliganism.vercel.app] #h(1fr) 2023 \
-// A punk rock lyric generator built in 3 days. \
-// - Designed an accessible, mobile-first UI using *SvelteKit* and *JavaScript/TypeScript*.
-// - Integrated *DuckDuckGo* and *OpenAI APIs* to acquire relevant news articles and generate content.
 
 *themendingnote* | Co-Founder, Developer #h(1fr) 2023 \
 An organization dedicated to providing used instruments and lessons for socioeconomically disadvantaged communities. \
