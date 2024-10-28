@@ -63,29 +63,27 @@ _A full-stack companion app for League of Legends._
 - Automated *CI/CD* of *Firebase Cloud Functions* using *GitHub Actions*.
 
 *Wordleverse* #h(1fr) 2024 \
-_A collection of Wordle clones for various fandoms._
-- Created website in *SvelteKit* + *TypeScript* + *Tailwind CSS*, statically hosted on *GitHub Pages*.
+- Leveraged *SvelteKit*, *TypeScript*, *Tailwind CSS*, and *GitHub Pages* to create a collection of Wordle clones.
 - Integrated a seedable PRNG implementation to deterministically select the "answer of the day" without a backend.
 - Architected reusable *Svelte* components for Wordle modes to eliminate duplicate code and improve maintainability.
 - Achieved a *\~58%* reduction in asset size through WebP compression techniques.
 
 *winstonyli.github.io* #h(1fr) 2024 \
-_My personal website._
-- Created website in *SvelteKit* + *TypeScript* + *Tailwind CSS*, statically hosted on *GitHub Pages*.
+- Built a personal website with *SvelteKit*, *TypeScript*, *Tailwind CSS*, and *GitHub Pages*.
 - Implemented direction-sensitive page sliding transitions using the *View Transitions API* and the *Svelte* transition directive.
 - Reduced sizes of served PDFs by *\~70%* by rewriting documents in *Typst* and precompiling them via *GitHub Actions*.
 
 *themendingnote* #sym.bullet Developer #h(1fr) 2023 \
 _An organization providing instruments & lessons for socioeconomically disadvantaged groups in my local community._
-- Deployed a responsive *SvelteKit* + *TypeScript* website on *Vercel*; applied mobile-first design principles with *Tailwind CSS* to ensure a responsive user experience across various devices.
-- Created a custom Google Sheets-based CMS by integrating the *Google Sheets API* to streamline management of volunteer bios.
-- Embedded *Google Forms* seamlessly into the website for handling volunteer and donations.
+- Deployed organization website using *SvelteKit*, *TypeScript*, and *Vercel*.
+- Applied mobile-first design principles with *Tailwind CSS* to ensure a responsive user experience across a variety of screen sizes.
+- Created a custom Google Sheets-based CMS by integrating the *Google Sheets API* to streamline management of volunteer bios; seamlessly embedded *Google Forms* for handling volunteer and donation requests.
 
 == Activities
 #divider
 
 *Video Game Development Club* #sym.bullet Programmer #sym.bullet Irvine, CA #h(1fr) Sep 2024 -- ongoing
-- Working with a team of 13 to create a Christmas-themed typing game in *C\#* and *Unity*.
+- Working with a team of 13 to create a game in *C\#* and *Unity*.
 - Facilitating collaboration between departments via *Git* and *Trello*.
 
 *Coding Club* #sym.bullet Co-President #sym.bullet Moraga, CA #h(1fr) Aug 2022 -- May 2024
@@ -100,7 +98,6 @@ _An organization providing instruments & lessons for socioeconomically disadvant
   [
     *Proficient in*:
     - JavaScript
-    - Node.js
     - Python
     - Rust
     - Svelte
@@ -116,6 +113,7 @@ _An organization providing instruments & lessons for socioeconomically disadvant
     - GitHub Actions
     - HTML + CSS
     - Nix
+    - Node.js
     - Unix systems & shells (e.g. Bash)
 
     #colbreak()
