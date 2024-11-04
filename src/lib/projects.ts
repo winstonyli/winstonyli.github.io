@@ -12,8 +12,8 @@ export const featured: ComponentProps<Project>[] = [
 		date: 'WIP',
 		blurb:
 			'A full-stack League of Legends companion app. Create builds (or yoink from external sources) and automatically import them.',
-		fields: ['CI/CD', 'Database', 'Full-Stack', 'Software', 'UI/UX', 'Web'],
-		tools: ['Firebase', 'Python', 'Rust', 'Svelte', 'TypeScript'],
+		fields: ['Full-Stack', 'UI/UX', 'Web'],
+		tools: ['Rust', 'Svelte', 'TypeScript'],
 	},
 	{
 		title: 'Wordleverse',

@@ -59,8 +59,7 @@ B.S. in Computer Science
 *Roanluder* #h(1fr) 2024 \
 _A full-stack companion app for League of Legends._
 - Building a desktop app that interfaces with the League of Legends process using *Tauri* (*Rust*, *SvelteKit*, and *TypeScript*).
-- Creating a robust backend that caches scraped data from wikis and other websites using *Python* and *Firebase*.
-- Automated *CI/CD* of *Firebase Cloud Functions* using *GitHub Actions*.
+- Creating a robust backend that caches scraped data from wikis and other websites.
 
 *Wordleverse* #h(1fr) 2024 \
 - Leveraged *SvelteKit*, *TypeScript*, *Tailwind CSS*, and *GitHub Pages* to create a collection of Wordle clones.
@@ -83,8 +82,9 @@ _An organization providing instruments & lessons for socioeconomically disadvant
 #divider
 
 *Video Game Development Club* #sym.bullet Programmer #sym.bullet Irvine, CA #h(1fr) Sep 2024 -- ongoing
-- Working with a team of 13 to create a game in *C\#* and *Unity*.
-- Facilitating collaboration between departments via *Git* and *Trello*.
+- Working with a team of 13 to create a typing game in *C\#* and *Unity*, where players work for Santa and transcribe Christmas wishlists with children's messy handwriting.
+- Implementing functionality of main UI window, including responsive user input handling and real-time feedback on incorrect characters.
+- Using *Git* to streamline collaboration between departments.
 
 *Coding Club* #sym.bullet Co-President #sym.bullet Moraga, CA #h(1fr) Aug 2022 -- May 2024
 - Presented engaging weekly lectures and activities; grew membership by 150%.
@@ -120,7 +120,6 @@ _An organization providing instruments & lessons for socioeconomically disadvant
 
     *Acquainted with*:
     - C\#
-    - Firebase
     - Go
     - Haskell
     - Java
