@@ -5,7 +5,7 @@
 <div class="prose">
 	<h1>Resume</h1>
 
-	<div class="divider" />
+	<div class="divider"></div>
 
 	<p>
 		Built in <a href="https://typst.app">Typst</a> and compiled to SVG & PDF using GitHub Actions!
@@ -13,7 +13,7 @@
 		lot if you <a href="/contact">contact</a>ed me. :)
 	</p>
 
-	<p />
+	<p></p>
 </div>
 
 <div

@@ -5,7 +5,7 @@
 <div class="prose text-center">
 	<h1>Oops!</h1>
 
-	<div class="divider" />
+	<div class="divider"></div>
 
 	<IconCry class="inline size-40" />
 

@@ -6,7 +6,7 @@
 <div class="prose mb-4">
 	<h1>Welcome to my website!</h1>
 
-	<div class="divider" />
+	<div class="divider"></div>
 
 	<IconCat class="inline size-40 w-full" />
 

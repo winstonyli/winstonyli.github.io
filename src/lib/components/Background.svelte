@@ -2,11 +2,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	export let radius = 8;
-	export let count = 12;
+	interface Props {
+		radius?: number;
+		count?: number;
+	}
 
-	let width: number;
-	let height: number;
+	let { radius = 8, count = 12 }: Props = $props();
+
+	let width: number = $state();
+	let height: number = $state();
 
 	interface Particle {
 		x: number;
@@ -14,7 +18,7 @@
 		theta: number;
 	}
 
-	let particles: Particle[] = [];
+	let particles: Particle[] = $state([]);
 
 	// Loop handle.
 	let frame: number;

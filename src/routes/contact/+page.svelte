@@ -8,7 +8,7 @@
 <div class="prose">
 	<h1>Contact</h1>
 
-	<div class="divider" />
+	<div class="divider"></div>
 
 	<p>
 		Feel free to reach me at <a href="mailto:liwy3@uci.edu">liwy3@uci.edu</a> or through another method

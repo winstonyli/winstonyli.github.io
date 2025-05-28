@@ -7,7 +7,7 @@
 <div class="prose">
 	<h1>Projects</h1>
 
-	<div class="divider" />
+	<div class="divider"></div>
 
 	<p>
 		I'm currently in the process of looking over my old repos to make sure I'm not leaking secrets,
@@ -18,13 +18,13 @@
 
 	<p>An array of projects I'm not (that) ashamed of.</p>
 
-	<p />
+	<p></p>
 </div>
 
 <FeaturedProjects />
 
 <div class="prose">
-	<p />
+	<p></p>
 
 	<h2>Other projects</h2>
 
@@ -33,7 +33,7 @@
 		progress somewhere.
 	</p>
 
-	<p />
+	<p></p>
 </div>
 
 <div class="grid gap-3 lg:grid-cols-2">

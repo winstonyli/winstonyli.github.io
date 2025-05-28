@@ -1,13 +1,25 @@
 <script lang="ts">
 	import wip from '$lib/assets/wip.webp';
 
-	export let title: string;
-	export let src: string = '';
-	export let href: string = '';
-	export let date: string;
-	export let blurb: string;
-	export let fields: string[] = [];
-	export let tools: string[] = [];
+	interface Props {
+		title: string;
+		src?: string;
+		href?: string;
+		date: string;
+		blurb: string;
+		fields?: string[];
+		tools?: string[];
+	}
+
+	let {
+		title,
+		src = '',
+		href = '',
+		date,
+		blurb,
+		fields = [],
+		tools = []
+	}: Props = $props();
 </script>
 
 <div

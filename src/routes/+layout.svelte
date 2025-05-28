@@ -15,6 +15,11 @@
 	import Background from '$lib/components/Background.svelte';
 	import IconMenu from '~icons/line-md/close-to-menu-transition';
 	import IconClose from '~icons/line-md/menu-to-close-transition';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	const TRANSITION_DURATION = 300;
 
@@ -29,11 +34,11 @@
 		routes.findIndex(({ href }) => href === target?.route.id);
 
 	// -1 if moving left, 0 if not moving, 1 if moving right
-	$: direction = Math.sign(indexOf($navigating?.to) - indexOf($navigating?.from));
+	let direction = $derived(Math.sign(indexOf($navigating?.to) - indexOf($navigating?.from)));
 
 	// Variables for disabling `a` tags while transitioning
-	let transitioning = false;
-	let slidingOut = false;
+	let transitioning = $state(false);
+	let slidingOut = $state(false);
 
 	onNavigate(() => {
 		transitioning = true;
@@ -53,7 +58,7 @@
 		);
 	});
 
-	let isMenuOpen = false;
+	let isMenuOpen = $state(false);
 </script>
 
 <div class="flex min-h-screen flex-col">
@@ -66,7 +71,7 @@
 				{#each routes as { name, href }, i}
 					<!-- Add dividers in between -->
 					{#if i}
-						<div class="divider divider-horizontal" />
+						<div class="divider divider-horizontal"></div>
 					{/if}
 
 					<li class:pointer-events-none={transitioning}>
@@ -122,7 +127,7 @@
 					</div>
 
 					<div class="rounded-box border-2 border-base-200 bg-base-100 p-8 shadow">
-						<slot />
+						{@render children?.()}
 					</div>
 				</div>
 			{/if}

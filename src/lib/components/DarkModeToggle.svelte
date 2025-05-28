@@ -1,11 +1,13 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { onMount } from 'svelte';
 	import { writable, type Writable } from 'svelte/store';
 	import IconSun from '~icons/line-md/moon-filled-to-sunny-filled-loop-transition';
 	import IconMoon from '~icons/line-md/sunny-filled-loop-to-moon-filled-loop-transition';
 
-	let theme: Writable<string>;
-	let isDarkMode: boolean;
+	let theme: Writable<string> = $state();
+	let isDarkMode: boolean = $state();
 
 	onMount(() => {
 		// Initialize theme in store.
@@ -21,7 +23,9 @@
 		isDarkMode = $theme === 'dark';
 	});
 
-	$: $theme && ($theme = isDarkMode ? 'dark' : 'light');
+	run(() => {
+		$theme && ($theme = isDarkMode ? 'dark' : 'light');
+	});
 
 	function updateTheme(theme: string) {
 		localStorage.theme = theme;
