@@ -4,6 +4,7 @@
     "": {
       "name": "winstonyli.github.io",
       "dependencies": {
+        "@fontsource/pt-serif": "^5.2.5",
         "@tsparticles/move-parallax": "^3.8.1",
         "@tsparticles/preset-triangles": "^3.2.0",
       },
@@ -110,6 +111,8 @@
     "@fontsource/fira-mono": ["@fontsource/fira-mono@5.2.6", "", {}, "sha512-6pyiGeFH+5DP5sICSwx5wu+9BlTEMTKki7bTppsEqXJysi1MiK82n6oSUaYkQWRLH51+DK7zv2JJsi82cOIS3g=="],
 
     "@fontsource/fira-sans": ["@fontsource/fira-sans@5.2.5", "", {}, "sha512-N+GrTGOTIeYE/Wi5tY0RAnc1Tl3ddCdwfZQncvA1zH/lOpKerj9ZS5nfniSXDZ9wrXFRdWTH7anyrRDc+cMpCg=="],
+
+    "@fontsource/pt-serif": ["@fontsource/pt-serif@5.2.5", "", {}, "sha512-5wXOmZEBqS3WGycuB1YCO9Rimrn18KiEJ2gCJGXPw6d/lLeYT5wclMhL7BB2a8Oh3eTROxTsEaGa5PweE7L/5Q=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 

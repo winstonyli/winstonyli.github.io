@@ -7,11 +7,9 @@
 @custom-variant dark (&:where([data-theme=business], [data-theme=business] *));;
 
 @theme {
-    --font-*: initial;
-    --font-sans: 'Fira Sans', sans-serif;
-    --font-mono: 'Fira Mono', monospace;
+    --font-serif: 'PT Serif', serif;
 }
 
 html {
-    @apply bg-base-200 dark:bg-neutral overflow-x-hidden overflow-y-scroll transition-colors;
+    @apply bg-base-200 dark:bg-neutral font-serif overflow-x-hidden overflow-y-scroll transition-colors;
 }
