@@ -53,7 +53,7 @@
                 setTimeout(() => {
                     transitioning = false;
                 }, TRANSITION_DURATION);
-            }, TRANSITION_DURATION),
+            }, TRANSITION_DURATION * 2),
         );
     });
 
