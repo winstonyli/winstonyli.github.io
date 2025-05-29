@@ -1,12 +1,12 @@
 import type { ComponentProps } from 'svelte';
-import Project from '$lib/components/Project.svelte';
+import type Project from '$lib/components/Project.svelte';
 import hooliganismSrc from '$lib/assets/projects/hooliganism.webp';
 import rennoSrc from '$lib/assets/projects/renno.webp';
 import talculatorSrc from '$lib/assets/projects/talculator.webp';
 import themendingnoteSrc from '$lib/assets/projects/themendingnote.webp';
 import wordleverseSrc from '$lib/assets/projects/wordleverse.webp';
 
-export const featured: ComponentProps<Project>[] = [
+export const featured: ComponentProps<typeof Project>[] = [
 	{
 		title: 'Roanluder',
 		date: 'WIP',
@@ -47,7 +47,7 @@ export const featured: ComponentProps<Project>[] = [
 	},
 ];
 
-export const other: ComponentProps<Project>[] = [
+export const other: ComponentProps<typeof Project>[] = [
 	{
 		title: 'Renno 2: Electric Boogaloo',
 		date: 'WIP',
