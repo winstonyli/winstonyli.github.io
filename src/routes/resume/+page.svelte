@@ -18,7 +18,7 @@
 
 <div
 	role="tablist"
-	class="tabs tabs-lifted tab-border-2 tabs-lg drop-shadow *:[--tab-border-color:oklch(var(--b2)/var(--tw-border-opacity))]"
+	class="tabs tabs-lifted tab-border-2 tabs-lg drop-shadow-sm *:[--tab-border-color:oklch(var(--b2)/var(--tw-border-opacity))]"
 >
 	<input type="radio" name="tabs" role="tab" class="tab" aria-label="SVG" checked />
 	<div
@@ -36,7 +36,7 @@
 	>
 		<object
 			title="Resume"
-			class="aspect-[5/7] w-full rounded-box p-3"
+			class="aspect-5/7 w-full rounded-box p-3"
 			data="/resume.pdf"
 			type="application/pdf"
 		>

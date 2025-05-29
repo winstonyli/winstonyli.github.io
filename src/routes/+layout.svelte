@@ -15,11 +15,8 @@
 	import Background from '$lib/components/Background.svelte';
 	import IconMenu from '~icons/line-md/close-to-menu-transition';
 	import IconClose from '~icons/line-md/menu-to-close-transition';
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
 
-	let { children }: Props = $props();
+	let { children } = $props();
 
 	const TRANSITION_DURATION = 300;
 
@@ -34,7 +31,7 @@
 		routes.findIndex(({ href }) => href === target?.route.id);
 
 	// -1 if moving left, 0 if not moving, 1 if moving right
-	let direction = $derived(Math.sign(indexOf($navigating?.to) - indexOf($navigating?.from)));
+	const direction = $derived(Math.sign(indexOf($navigating?.to) - indexOf($navigating?.from)));
 
 	// Variables for disabling `a` tags while transitioning
 	let transitioning = $state(false);
@@ -63,7 +60,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<!-- Navbar -->
-	<nav class="navbar sticky top-0 z-30 border-b-2 border-base-200 bg-base-100 shadow">
+	<nav class="navbar border-base-200 bg-base-100 sticky top-0 z-30 border-b-2 shadow-sm">
 		<div class="navbar-start ml-6">Winston Li</div>
 
 		<ul class="navbar-center hidden lg:flex">
@@ -94,7 +91,7 @@
 				</summary>
 
 				<ul
-					class="menu dropdown-content right-0 rounded-box border-2 border-base-200 bg-base-100 shadow"
+					class="menu dropdown-content rounded-box border-base-200 bg-base-100 right-0 border-2 shadow-sm"
 				>
 					{#each routes as { name, href }}
 						<li class:pointer-events-none={transitioning}>
@@ -126,7 +123,7 @@
 						<AboutMe />
 					</div>
 
-					<div class="rounded-box border-2 border-base-200 bg-base-100 p-8 shadow">
+					<div class="rounded-box border-base-200 bg-base-100 border-2 p-8 shadow-sm">
 						{@render children?.()}
 					</div>
 				</div>
@@ -136,16 +133,6 @@
 </div>
 
 <!-- Background -->
-<div class="fixed inset-0 -z-10 h-screen w-screen fill-base-100 stroke-base-200 stroke-1">
+<div class="fill-base-100 stroke-base-200 fixed inset-0 -z-10 h-screen w-screen stroke-1">
 	<Background />
 </div>
-
-<style lang="postcss">
-	:global(html) {
-		@apply overflow-x-hidden overflow-y-scroll transition-colors;
-
-		&[data-theme='dark'] {
-			@apply bg-neutral;
-		}
-	}
-</style>

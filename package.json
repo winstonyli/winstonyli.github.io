@@ -1,44 +1,35 @@
 {
-	"name": "winstonyli.github.io",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
-	},
-	"devDependencies": {
-		"@fontsource/fira-mono": "^5.0.13",
-		"@fontsource/fira-sans": "^5.0.20",
-		"@iconify/json": "^2.2.235",
-		"@sveltejs/adapter-static": "^3.0.4",
-		"@sveltejs/kit": "^2.5.27",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0",
-		"@tailwindcss/typography": "^0.5.13",
-		"@types/dom-view-transitions": "^1.0.5",
-		"@types/eslint": "^8.56.7",
-		"autoprefixer": "^10.4.19",
-		"daisyui": "^4.12.10",
-		"eslint": "^9.0.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.45.1",
-		"globals": "^15.0.0",
-		"postcss": "^8.4.39",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.2.6",
-		"prettier-plugin-tailwindcss": "^0.6.4",
-		"svelte": "^5.0.0",
-		"svelte-check": "^4.0.0",
-		"tailwindcss": "^3.4.6",
-		"tslib": "^2.4.1",
-		"typescript": "^5.5.0",
-		"typescript-eslint": "^8.0.0-alpha.20",
-		"unplugin-icons": "^0.19.2",
-		"vite": "^5.4.4"
-	},
-	"type": "module"
+    "name": "winstonyli.github.io",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    },
+    "devDependencies": {
+        "@fontsource/fira-mono": "^5.2.6",
+        "@fontsource/fira-sans": "^5.2.5",
+        "@iconify/json": "^2.2.342",
+        "@sveltejs/adapter-static": "^3.0.8",
+        "@sveltejs/kit": "^2.21.1",
+        "@sveltejs/vite-plugin-svelte": "^5.0.3",
+        "@tailwindcss/typography": "^0.5.16",
+        "@types/dom-view-transitions": "^1.0.6",
+        "@types/eslint": "^9.6.1",
+        "daisyui": "^5.0.40",
+        "svelte": "^5.33.5",
+        "svelte-check": "^4.2.1",
+        "tailwindcss": "^4.1.8",
+        "tslib": "^2.8.1",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.33.0",
+        "unplugin-icons": "^22.1.0"
+    },
+    "type": "module",
+    "dependencies": {
+        "@tailwindcss/postcss": "^4.1.8"
+    }
 }
