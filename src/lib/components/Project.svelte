@@ -37,7 +37,7 @@
     <div class="card-body">
         <h2 class="card-title">
             {#if typeof href !== "undefined"}
-                <a class="link" {href}>{title}</a>
+                <a {href} rel="external" class="link">{title}</a>
             {:else}
                 {title}
             {/if}
