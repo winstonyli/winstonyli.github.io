@@ -1,35 +1,36 @@
 <script lang="ts">
-	import IconEmail from '~icons/line-md/email';
-	import IconGithub from '~icons/line-md/github';
-	import IconInstagram from '~icons/line-md/instagram';
-	import IconLinkedin from '~icons/line-md/linkedin';
+    import IconChat from "~icons/line-md/chat";
+    import IconEmail from "~icons/line-md/email";
+    import IconGithub from "~icons/line-md/github";
+    import IconInstagram from "~icons/line-md/instagram";
+    import IconLinkedin from "~icons/line-md/linkedin";
 </script>
 
 <div class="prose">
-	<h1>Contact</h1>
+    <h1>Contact</h1>
 
-	<div class="divider"></div>
+    <div class="divider"><IconChat class="size-24" /></div>
 
-	<p>
-		Feel free to reach me at <a href="mailto:liwy3@uci.edu">liwy3@uci.edu</a> or through another method
-		listed below!
-	</p>
+    <p>
+        Email (<a href="mailto:liwy3@uci.edu">liwy3@uci.edu</a>) preferred, but
+        feel free to reach me through any method listed below!
+    </p>
 
-	<div class="flex gap-3">
-		<a href="mailto:liwy3@uci.edu">
-			<IconEmail />
-		</a>
+    <div class="flex gap-3">
+        <a href="mailto:liwy3@uci.edu">
+            <IconEmail />
+        </a>
 
-		<a href="https://github.com/winstonyli">
-			<IconGithub />
-		</a>
+        <a href="https://github.com/winstonyli">
+            <IconGithub />
+        </a>
 
-		<a href="https://www.instagram.com/winstonyli">
-			<IconInstagram />
-		</a>
+        <a href="https://www.instagram.com/winstonyli">
+            <IconInstagram />
+        </a>
 
-		<a href="https://www.linkedin.com/in/winstonyli">
-			<IconLinkedin />
-		</a>
-	</div>
+        <a href="https://www.linkedin.com/in/winstonyli">
+            <IconLinkedin />
+        </a>
+    </div>
 </div>

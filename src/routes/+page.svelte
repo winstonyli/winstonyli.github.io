@@ -1,37 +1,64 @@
 <script lang="ts">
-    import FeaturedProjects from "$lib/components/FeaturedProjects.svelte";
     import IconCat from "~icons/line-md/github-loop";
+    import meme from "$lib/assets/meme.webp";
 </script>
 
-<div class="prose mb-4">
+<div class="prose">
     <h1>Welcome to my website!</h1>
 
-    <div class="divider"></div>
-
-    <IconCat class="inline size-40 w-full" />
+    <div class="divider"><IconCat class="size-24" /></div>
 
     <p>
-        (Here's a GitHub cat quasi-maneki-neko.) Feel free to check out my
+        Feel free to check out my
         <a href="/resume">resume</a>, <a href="/projects">projects</a>,
-        <a href="/contact">contact</a> me, or browse through my website on your own!
+        <a href="/contact">contact</a> me, or browse on your own!
     </p>
 
-    <h2>Featured projects</h2>
+    <p></p>
 </div>
 
-<FeaturedProjects />
+<div class="chat chat-start">
+    <div class="chat-image avatar">
+        <div class="w-20 rounded-sm">
+            <img
+                src={meme}
+                alt={'A meme captioned "sometimes I think but then i forget" (with that exact capitalization)'}
+            />
+        </div>
+    </div>
+    <div class="chat-bubble chat-bubble-primary">
+        sometimes i think but then i forget
+    </div>
+</div>
 
-<div class="prose mt-6">
-    <h2>Libraries and tools used</h2>
+<div class="prose">
+    <p></p>
 
-    <ul>
-        <li><a href="https://kit.svelte.dev">SvelteKit</a></li>
-        <li><a href="https://tailwindcss.com">Tailwind CSS</a></li>
-        <li><a href="https://daisyui.com">DaisyUI</a></li>
-        <li>
-            <a href="https://github.com/unplugin/unplugin-icons">
-                unplugin-icons
-            </a>
-        </li>
-    </ul>
+    <h2>Random facts</h2>
+
+    <p>
+        It has been approximately
+        {Math.round(
+            (Date.now() - new Date("2006-07-02").valueOf()) / 1000,
+        ).toLocaleString("en-US", {
+            notation: "compact",
+            compactDisplay: "long",
+        })}
+        seconds since I came into existence.
+    </p>
+
+    <p>
+        This website uses
+        <a href="https://kit.svelte.dev">SvelteKit</a>,
+        <a href="https://tailwindcss.com">Tailwind CSS</a>,
+        <a href="https://daisyui.com">DaisyUI</a>,
+
+        <a href="https://github.com/unplugin/unplugin-icons">
+            unplugin-icons
+        </a>
+        (mostly
+        <a href="https://github.com/cyberalien/line-md">Material Line Icons</a
+        >), and
+        <a href="https://particles.js.org">tsParticles</a>.
+    </p>
 </div>

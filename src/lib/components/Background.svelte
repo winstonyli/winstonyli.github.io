@@ -25,18 +25,24 @@
 
             fullScreen: false,
             background: { opacity: 0 },
-            backgroundMask: { enable: true, composite: "lighten" },
 
             particles: {
                 number: {
                     value: 200,
                     density: { enable: true },
                 },
+
                 color: { value: "random" },
-                move: { speed: 0.8 },
+                shadow: { enable: true },
+
+                move: {
+                    speed: 0.8,
+                    attract: { enable: true },
+                },
 
                 links: {
                     color: { value: "random" },
+                    triangles: { opacity: 0.01 },
                 },
             },
 
@@ -46,7 +52,7 @@
                         enable: true,
                         parallax: {
                             enable: true,
-                            force: 20,
+                            force: 50,
                         },
                     },
                 },

@@ -65,89 +65,87 @@
     <Background />
 </div>
 
-<div class="flex min-h-screen flex-col">
-    <!-- Navbar -->
-    <nav
-        class="navbar border-base-200 bg-base-100 sticky top-0 z-30 border-b-2 shadow-sm"
-    >
-        <div class="navbar-start ml-6">Winston Li</div>
+<!-- Navbar -->
+<nav
+    class="fixed navbar h-16 border-base-200 bg-base-100 top-0 z-30 border-b-2 shadow-sm"
+>
+    <div class="navbar-start ml-6">Winston Li</div>
 
-        <ul class="navbar-center hidden lg:flex">
-            {#key transitioning}
-                {#each routes as { name, href }, i}
-                    <!-- Add dividers in between -->
-                    {#if i}
-                        <div class="divider divider-horizontal"></div>
-                    {/if}
+    <ul class="navbar-center hidden lg:flex">
+        {#key transitioning}
+            {#each routes as { name, href }, i}
+                <!-- Add dividers in between -->
+                {#if i}
+                    <div class="divider divider-horizontal"></div>
+                {/if}
 
+                <li class:pointer-events-none={transitioning}>
+                    <NavButton {href}>{name}</NavButton>
+                </li>
+            {/each}
+        {/key}
+    </ul>
+
+    <div class="navbar-end flex gap-2 lg:mr-4">
+        <DarkModeToggle />
+
+        <details bind:open={isMenuOpen} class="group dropdown lg:hidden">
+            <summary class="btn btn-circle btn-ghost">
+                {#if isMenuOpen}
+                    <IconClose class="size-6" />
+                {:else}
+                    <IconMenu class="size-6" />
+                {/if}
+            </summary>
+
+            <ul
+                class="menu dropdown-content rounded-box border-base-200 bg-base-100 right-0 border-2 shadow-sm"
+            >
+                {#each routes as { name, href }}
                     <li class:pointer-events-none={transitioning}>
                         <NavButton {href}>{name}</NavButton>
                     </li>
                 {/each}
-            {/key}
-        </ul>
+            </ul>
+        </details>
+    </div>
+</nav>
 
-        <div class="navbar-end flex gap-2 lg:mr-4">
-            <DarkModeToggle />
+<!-- Page content -->
+<div class="m-5 flex flex-col gap-10 pt-16 lg:m-10 lg:ml-0 lg:flex-row">
+    <!-- About me (desktop, on all routes) -->
+    <div class="hidden lg:block">
+        <AboutMe />
+    </div>
 
-            <details bind:open={isMenuOpen} class="group dropdown lg:hidden">
-                <summary class="btn btn-circle btn-ghost">
-                    {#if isMenuOpen}
-                        <IconClose class="size-6" />
-                    {:else}
-                        <IconMenu class="size-6" />
-                    {/if}
-                </summary>
-
-                <ul
-                    class="menu dropdown-content rounded-box border-base-200 bg-base-100 right-0 border-2 shadow-sm"
-                >
-                    {#each routes as { name, href }}
-                        <li class:pointer-events-none={transitioning}>
-                            <NavButton {href}>{name}</NavButton>
-                        </li>
-                    {/each}
-                </ul>
-            </details>
-        </div>
-    </nav>
-
-    <!-- Page content -->
-    <div class="m-5 flex flex-col gap-10 lg:m-10 lg:ml-0 lg:flex-row">
-        <!-- About me (desktop, on all routes) -->
-        <div class="hidden lg:block">
-            <AboutMe />
-        </div>
-
-        <div class="flex flex-1 justify-center">
-            <!-- Svelte transitions don't play nice with MPAs, and View Transition API doesn't have a way to exclude elements, so I'm doing this -->
-            {#if !slidingOut}
+    <div class="flex flex-1 items-start justify-center">
+        <!-- Svelte transitions don't play nice with MPAs, and View Transition API doesn't have a way to exclude elements, so I'm doing this -->
+        {#if !slidingOut}
+            <div
+                in:fly={{
+                    x: `${direction}00%`,
+                    duration: TRANSITION_DURATION,
+                }}
+                out:fly={{
+                    x: `${-direction}00%`,
+                    duration: TRANSITION_DURATION,
+                }}
+                class="flex flex-col justify-center gap-6"
+            >
                 <!-- About me (mobile, only on root) -->
                 <div
-                    in:fly={{
-                        x: `${direction}00%`,
-                        duration: TRANSITION_DURATION,
-                    }}
-                    out:fly={{
-                        x: `${-direction}00%`,
-                        duration: TRANSITION_DURATION,
-                    }}
-                    class="flex flex-col gap-6"
+                    class="lg:hidden m-auto"
+                    class:hidden={$page.route.id !== "/"}
                 >
-                    <div
-                        class="lg:hidden"
-                        class:hidden={$page.route.id !== "/"}
-                    >
-                        <AboutMe />
-                    </div>
-
-                    <div
-                        class="rounded-box border-base-200 bg-base-100 border-2 p-8 shadow-sm"
-                    >
-                        {@render children?.()}
-                    </div>
+                    <AboutMe />
                 </div>
-            {/if}
-        </div>
+
+                <div
+                    class="rounded-box border-base-200 bg-base-100 border-2 p-8 shadow-sm"
+                >
+                    {@render children?.()}
+                </div>
+            </div>
+        {/if}
     </div>
 </div>
