@@ -1,7 +1,6 @@
 <script lang="ts">
     import "../app.css";
-    import "@fontsource/fira-mono";
-    import "@fontsource/fira-sans";
+    import "@fontsource/pt-serif";
 
     import { fly } from "svelte/transition";
     import type { NavigationTarget } from "@sveltejs/kit";
