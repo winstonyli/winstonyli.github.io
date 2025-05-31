@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite dev",
         "build": "bun run build:typst && vite build",
-        "build:typst": "bunx typst compile static/resume.typ static/resume.pdf && bunx typst compile static/resume.type static/resume.svg",
+        "build:typst": "bunx typst compile static/resume.typ static/resume.pdf && bunx typst compile static/resume.typ static/resume.svg",
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
