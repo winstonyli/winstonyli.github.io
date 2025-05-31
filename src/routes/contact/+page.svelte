@@ -12,8 +12,7 @@
     <div class="divider"><IconChat class="size-24" /></div>
 
     <p>
-        Email (<a href="mailto:liwy3@uci.edu">liwy3@uci.edu</a>) preferred, but
-        feel free to reach me through any method listed below!
+        Reach me at <a href="mailto:liwy3@uci.edu">liwy3@uci.edu</a>!
     </p>
 
     <div class="flex gap-3">

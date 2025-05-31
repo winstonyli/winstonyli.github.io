@@ -98,7 +98,7 @@
             </summary>
 
             <ul
-                class="menu dropdown-content rounded-box border-base-200 bg-base-100 right-0 border-2 shadow-sm"
+                class="menu dropdown-content rounded-box border-base-200 bg-base-100 w-32 right-0 border-2 shadow-sm"
             >
                 {#each routes as { name, href }}
                     <li class:pointer-events-none={transitioning}>
@@ -110,8 +110,8 @@
     </div>
 </nav>
 
-<!-- Page content -->
-<div class="m-5 flex flex-col gap-10 pt-16 lg:m-10 lg:ml-0 lg:flex-row">
+<!-- Actual page content -->
+<main class="m-5 flex flex-col gap-10 pt-16 lg:m-10 lg:ml-0 lg:flex-row">
     <!-- About me (desktop, on all routes) -->
     <div class="hidden lg:block">
         <AboutMe />
@@ -139,6 +139,7 @@
                     <AboutMe />
                 </div>
 
+                <!-- Actual actual page content -->
                 <div
                     class="rounded-box border-base-200 bg-base-100 border-2 p-8 shadow-sm"
                 >
@@ -147,4 +148,4 @@
             </div>
         {/if}
     </div>
-</div>
+</main>

@@ -5,6 +5,8 @@ node_modules
 .vercel
 /.svelte-kit
 /build
+/static/resume.pdf
+/static/resume.svg
 
 # OS
 .DS_Store

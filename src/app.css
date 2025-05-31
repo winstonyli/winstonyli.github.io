@@ -13,3 +13,11 @@
 html {
     @apply bg-base-200 dark:bg-neutral font-serif overflow-x-hidden overflow-y-scroll transition-colors;
 }
+
+h1 {
+    @apply text-center
+}
+
+.prose {
+    @apply m-auto w-full
+}

@@ -13,9 +13,12 @@
 
     <div class="divider"><IconIdea class="size-24" /></div>
 
-    <p>A rough list of my past, present, and/or future projects.</p>
-
     <h2>Current projects</h2>
+
+    <p>
+        There's a 99% chance that the project(s) directly below are
+        programming-language-related.
+    </p>
 
     <p></p>
 </div>

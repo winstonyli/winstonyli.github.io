@@ -23,7 +23,7 @@
 </script>
 
 <div
-    class="card image-full border-2 border-base-200 bg-base-100 transition hover:z-10 hover:scale-110 hover:shadow-2xl hover:brightness-110 dark:bg-neutral lg:hover:scale-[1.03]"
+    class="card image-full border-2 border-base-200 bg-neutral transition hover:z-10 hover:scale-110 hover:shadow-2xl hover:brightness-110 dark:bg-neutral lg:hover:scale-[1.03]"
 >
     <figure>
         <img

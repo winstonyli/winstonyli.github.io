@@ -1,6 +1,8 @@
 <script lang="ts">
     import IconCat from "~icons/line-md/github-loop";
     import meme from "$lib/assets/meme.webp";
+
+    const hCount = 20;
 </script>
 
 <div class="prose">
@@ -8,11 +10,11 @@
 
     <div class="divider"><IconCat class="size-24" /></div>
 
-    <p>
-        Feel free to check out my
-        <a href="/resume">resume</a>, <a href="/projects">projects</a>,
-        <a href="/contact">contact</a> me, or browse on your own!
-    </p>
+    I have absolutely zero idea what to put here. U{#each Array(hCount).keys() as i}
+        <span style:font-size="{Math.cos((i / hCount) * Math.PI) / 2 + 0.5}rem"
+            >h</span
+        >
+    {/each}... how about this?
 
     <p></p>
 </div>
@@ -26,7 +28,7 @@
             />
         </div>
     </div>
-    <div class="chat-bubble chat-bubble-primary">
+    <div class="ml-2 chat-bubble chat-bubble-primary">
         sometimes i think but then i forget
     </div>
 </div>

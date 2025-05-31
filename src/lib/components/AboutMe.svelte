@@ -7,15 +7,15 @@
 >
     <h1>Hi! I'm Winston. [they/them]</h1>
 
-    <p>
-        I'm a 1st-year CS undergrad @ UCI who likes programming language design
-        and theory, like... a lot. If that's what you're looking for, then I'm
-        your person!
-    </p>
-
     <img
         src={cats}
         alt="My cats"
-        class="aspect-square rounded-sm object-cover"
+        class="rounded-sm object-cover object-top aspect-[1.618]"
     />
+
+    <p>
+        I'm a 1st-year CS undergrad @ UCI who likes programming language design
+        and theory. Like... a lot. If that's what you're looking for, then I'm
+        your person!
+    </p>
 </div>

@@ -3,7 +3,8 @@
     "private": true,
     "scripts": {
         "dev": "vite dev",
-        "build": "vite build",
+        "build": "build:typst && vite build",
+        "build:typst": "typst compile static/resume.typ static/resume.pdf && typst compile static/resume.type static/resume.svg",
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"

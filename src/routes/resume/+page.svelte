@@ -17,14 +17,14 @@
     <p></p>
 </div>
 
-<div class="indicator">
-    <div class="overflow-auto rounded-box border-2 border-base-200 bg-base-100">
-        <img src="/resume.svg" alt="My resume" />
-    </div>
+<div class="relative">
     <a
         href="/resume.pdf"
-        class="indicator-item btn btn-xs btn-circle btn-primary"
+        class="absolute btn btn-sm btn-circle btn-ghost right-0 m-3"
     >
-        <IconLink />
+        <IconLink class="size-5" />
     </a>
+    <div class="overflow-auto rounded-box border-2 border-base-200 bg-base-100">
+        <img src="/resume.svg" alt="My resume" class="w-full" />
+    </div>
 </div>
