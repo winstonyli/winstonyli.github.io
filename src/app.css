@@ -11,7 +11,7 @@
 }
 
 html {
-    @apply bg-base-200 dark:bg-neutral font-serif overflow-x-hidden overflow-y-scroll transition-colors;
+    @apply bg-base-200 dark:bg-neutral font-serif min-h-dvh min-w-dvh overflow-x-hidden overflow-y-scroll transition-colors;
 }
 
 h1 {
