@@ -1,5 +1,6 @@
 #set page(margin: (x: 1cm, y: 1cm))
 #set par(justify: true)
+#set text(size: 13pt)
 #show link: underline
 
 #let div(content) = {
@@ -34,12 +35,12 @@
   #link("https://www.linkedin.com/in/winstonyli")[LinkedIn]
 ]
 
-*Research interests* hover around programming language design and theory, e.g., formal methods and analysis. Quick learner, unique thinker, and team player. (Resume last updated Dec 15, 2025.)
+Resume last updated Dec 19, 2025.
 
 
 #div[== Education]
 
-*UC Irvine* #sym.bullet B.S. in Computer Science, 3.97 / 4.00 GPA #h(1fr) Sep 2024 -- Jun 2026 / 2027
+*UC Irvine* #sym.bullet B.S. in Computer Science, 3.95 / 4.00 GPA #h(1fr) Sep 2024 -- Jun 2026 / 2027
 #hlist[
   - Data Structures
   - Algorithms
@@ -67,12 +68,15 @@
 - Statically hosted Wordles; integrated seedable PRNG to select "answer of the day" w/o backend.
 
 
-#div[== Languages and tools]
+#div[== Skills and interests]
 
-- *Proficient* in Rust, JavaScript / TypeScript, Python, Svelte, and Tailwind.
-- *Familiar* with C / C++, Git, GitHub Actions, HTML, CSS, Nix, LaTeX, Typst, and Unix systems and shells.
-- *Acquainted* with most mainstream languages, e.g., C\#, Go, Haskell, Java, Lua, Ruby, and SQL.
+*Proficient* in Rust, JavaScript / TypeScript, Python, Svelte, and Tailwind.
 
+*Familiar* with C / C++, Git, GitHub Actions, HTML, CSS, Nix, LaTeX, Typst, and Unix systems & shells.
+
+*Acquainted* with most mainstream languages, e.g., C\#, Go, Haskell, Java, Lua, Ruby, and SQL.
+
+*Research interests* $approx$ programming language design and theory, e.g., formal methods and analysis.
 
 #div[== Experience]
 
