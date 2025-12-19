@@ -4,7 +4,7 @@
 </script>
 
 <article class="not-prose relative -m-[1cm] select-none">
-    {@html resume.replaceAll(/href="#.*?"/g, '')}
+    {@html resume}
     <a href="/resume.pdf" class="btn absolute -top-2 -right-2 btn-xs btn-primary">
         Click here for the PDF version.
     </a>
