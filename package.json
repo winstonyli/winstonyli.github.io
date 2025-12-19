@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {
         "build": "bun run build:typst && vite build",
-        "build:typst": "bunx typst compile static/resume.typ static/resume.pdf && bunx typst compile static/resume.typ static/resume.svg"
+        "build:typst": "bunx typst compile src/lib/assets/resume.typ static/resume.pdf"
     },
     "devDependencies": {
         "@eslint/compat": "^2.0.0",
