@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { navigating, page } from "$app/state";
+    import { navigating, page } from '$app/state';
 
     interface Props {
         href: string;
-        children?: import("svelte").Snippet;
+        children?: import('svelte').Snippet;
     }
 
     let { href, children }: Props = $props();
@@ -14,7 +14,7 @@
 
 <a
     {href}
-    class="link-hover link"
+    class="link link-hover"
     class:pointer-events-none={isCurrentPage}
     class:underline={isCurrentPage || isNavigatingToPage}
 >

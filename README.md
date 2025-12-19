@@ -1,8 +1,9 @@
 # winstonyli.github.io 🤓
 
-My personal website! Very much *not* intended as a template, but feel free to yoink certain parts.
+My personal website! Very much _not_ intended as a template, but feel free to yoink certain parts.
 
 Built using:
+
 - [SvelteKit](https://github.com/sveltejs/kit)
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
 - [DaisyUI](https://github.com/saadeghi/daisyui)

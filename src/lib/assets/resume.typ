@@ -1,6 +1,5 @@
 #set page(margin: (x: 1cm, y: 1cm))
 #set par(justify: true)
-#set text(size: 12pt)
 #show link: underline
 
 #let div(content) = {

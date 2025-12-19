@@ -1,71 +1,62 @@
 <script lang="ts">
-    import wip from "$lib/assets/wip.webp";
+    import IconLink from '~icons/line-md/external-link';
+    import wip from '$lib/assets/wip.webp';
 
     interface Props {
         title: string;
+        status: string;
+        blurb: string;
         src?: string;
         href?: string;
-        date?: string;
-        blurb: string;
         fields?: string[];
         tools?: string[];
     }
 
-    let {
-        title,
-        src = wip,
-        href,
-        date,
-        blurb,
-        fields = [],
-        tools = [],
-    }: Props = $props();
+    let { title, status, src = wip, href, blurb, fields = [], tools = [] }: Props = $props();
 </script>
 
-<div
-    class="card image-full border-2 border-base-200 bg-neutral transition hover:z-10 hover:scale-110 hover:shadow-2xl hover:brightness-110 dark:bg-neutral lg:hover:scale-[1.03]"
->
-    <figure>
-        <img
-            {src}
-            alt={title}
-            class="object-cover"
-            class:bg-neutral={typeof src === "undefined"}
-        />
-    </figure>
+<a {href} rel="external" class="not-prose group hover-3d">
+    <article class="card relative border-2 border-base-200 dark:bg-neutral">
+        <figure class:hidden={!src}>
+            <img {src} alt={title} class="bg-neutral" />
+        </figure>
 
-    <div class="card-body">
-        <h2 class="card-title">
-            {#if typeof href !== "undefined"}
-                <a {href} rel="external" class="link">{title}</a>
-            {:else}
+        <div class="card-body">
+            <h2 class="card-title">
                 {title}
-            {/if}
-
-            <span
-                class="badge badge-accent badge-sm border-none bg-linear-to-bl from-accent lg:badge-md"
-                class:to-primary={typeof date === "undefined"}
-            >
-                {date ?? "WIP"}
-            </span>
-        </h2>
-        <p>{@html blurb}</p>
-
-        <div class="card-actions">
-            {#each fields as field}
-                <div
-                    class="badge badge-primary badge-sm text-primary-content lg:badge-md"
-                >
-                    {field}
+                <div class="join">
+                    {#each fields as field}
+                        <div class="join-item badge badge-sm text-primary-content badge-primary">
+                            {field}
+                        </div>
+                    {/each}
                 </div>
-            {/each}
-            {#each tools as tool}
-                <div
-                    class="badge badge-secondary badge-sm text-secondary-content lg:badge-md"
-                >
-                    {tool}
+                <div class="join">
+                    {#each tools as tool}
+                        <div
+                            class="join-item badge badge-sm text-secondary-content badge-secondary"
+                        >
+                            {tool}
+                        </div>
+                    {/each}
                 </div>
-            {/each}
+            </h2>
+            <p>{blurb}</p>
+            <em>{status}</em>
         </div>
-    </div>
-</div>
+
+        <div class="btn absolute right-0 m-2 btn-circle btn-sm btn-primary" class:hidden={!href}>
+            <IconLink class="size-4" />
+        </div>
+    </article>
+
+    <!-- 8 empty divs are needed for DaisyUI's `hover-3d` effect. -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</a>

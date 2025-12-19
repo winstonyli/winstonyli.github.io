@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@plugin 'daisyui' {
+    themes:
+        corporate --default,
+        business --prefersdark;
+}
+@custom-variant dark (&:where([data-theme=business], [data-theme=business] *));
+
+@theme {
+    --font-serif: 'PT Serif', serif;
+}
+
+html {
+    @apply min-h-dvh min-w-dvh overflow-x-hidden overflow-y-scroll bg-base-200 font-serif transition-colors dark:bg-neutral;
+}

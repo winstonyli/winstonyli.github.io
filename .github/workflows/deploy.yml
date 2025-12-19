@@ -1,62 +1,62 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Deploy on push to main...
-  push:
-    branches: [main]
+    # Deploy on push to main...
+    push:
+        branches: [main]
 
-  # ...or manually.
-  workflow_dispatch:
+    # ...or manually.
+    workflow_dispatch:
 
 # Grant GITHUB_TOKEN permissions needed for deployment to Pages.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 # Skip runs queued between currently running & latest queued.
 # Don't cancel in-progress runs.
 concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+    group: 'pages'
+    cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Install Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: 1.2.0
+            - name: Install Bun
+              uses: oven-sh/setup-bun@v2
+              with:
+                  bun-version: 1.2.0
 
-      - name: Install other dependencies
-        run: bun install
+            - name: Install other dependencies
+              run: bun install
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: sveltekit
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+              with:
+                  static_site_generator: sveltekit
 
-      - name: Build
-        run: bun run build
+            - name: Build
+              run: bun run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: build
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
 
-    # Deploy to github-pages environment.
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+        # Deploy to github-pages environment.
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
 
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        steps:
+            - name: Deploy to GitHub Pages
+              uses: actions/deploy-pages@v4

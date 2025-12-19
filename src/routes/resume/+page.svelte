@@ -1,30 +1,22 @@
 <script lang="ts">
-    import IconDoc from "~icons/line-md/document-list";
-    import IconLink from "~icons/line-md/external-link";
+    // @ts-ignore
+    import resume from '$lib/assets/resume.typ';
 </script>
 
-<div class="prose">
-    <h1>Resume</h1>
-
-    <div class="divider"><IconDoc class="size-24" /></div>
-
-    <p>
-        Built with <a href="https://typst.app">Typst</a> and precompiled via
-        GitHub Actions! Feel free to <a href="/contact">contact</a> me for any additional
-        information and/or suggestions.
-    </p>
-
-    <p></p>
-</div>
-
-<div class="relative">
-    <a
-        href="/resume.pdf"
-        class="absolute btn btn-sm btn-circle btn-ghost right-0 m-3"
-    >
-        <IconLink class="size-5" />
+<article class="not-prose relative -m-[1cm] select-none">
+    {@html resume}
+    <a href="/resume.pdf" class="btn absolute -top-2 -right-2 btn-xs btn-primary">
+        Click here for the PDF version.
     </a>
-    <div class="overflow-auto rounded-box border-2 border-base-200 bg-base-100">
-        <img src="/resume.svg" alt="My resume" class="w-full" />
-    </div>
-</div>
+</article>
+
+<style class="postcss">
+    :global(svg.typst-doc) {
+        width: 100%;
+        height: 100%;
+        :global(*[fill='#000'], *[stroke='#000']) {
+            fill: var(--color-base-content);
+            stroke: var(--color-base-content);
+        }
+    }
+</style>

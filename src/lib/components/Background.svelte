@@ -1,62 +1,51 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import { particlesInit } from "@tsparticles/svelte";
-    import { loadParallaxMover } from "@tsparticles/move-parallax";
-    import { loadTrianglesPreset } from "@tsparticles/preset-triangles";
+    import Particles, { particlesInit } from '@tsparticles/svelte';
+    import { loadParallaxMover } from '@tsparticles/move-parallax';
+    import { loadTrianglesPreset } from '@tsparticles/preset-triangles';
 
-    particlesInit((engine) =>
-        Promise.all([
-            loadParallaxMover(engine),
-            loadTrianglesPreset(engine),
-        ]).then(() => {}),
-    );
-
-    let Particles: typeof import("@tsparticles/svelte").default;
-    onMount(async () => {
-        Particles = (await import("@tsparticles/svelte")).default;
+    particlesInit(async (engine) => {
+        await Promise.all([loadParallaxMover(engine), loadTrianglesPreset(engine)]);
     });
 </script>
 
-{#if Particles}
-    <Particles
-        class="fixed inset-0 -z-10 w-[110vw] h-[110vh]"
-        options={{
-            preset: "triangles",
+<Particles
+    class="fixed inset-0 -z-10 h-[110vh] w-[110vw]"
+    options={{
+        preset: 'triangles',
 
-            fullScreen: false,
-            background: { opacity: 0 },
+        fullScreen: false,
+        background: { opacity: 0 },
 
-            particles: {
-                number: {
-                    value: 200,
-                    density: { enable: true },
-                },
-
-                color: { value: "random" },
-                shadow: { enable: true },
-
-                move: {
-                    speed: 0.8,
-                    attract: { enable: true },
-                },
-
-                links: {
-                    color: { value: "random" },
-                    triangles: { opacity: 0.01 },
-                },
+        particles: {
+            number: {
+                value: 200,
+                density: { enable: true },
             },
 
-            interactivity: {
-                events: {
-                    onHover: {
+            color: { value: 'random' },
+            shadow: { enable: true },
+
+            move: {
+                speed: 0.8,
+                attract: { enable: true },
+            },
+
+            links: {
+                color: { value: 'random' },
+                triangles: { opacity: 0.01 },
+            },
+        },
+
+        interactivity: {
+            events: {
+                onHover: {
+                    enable: true,
+                    parallax: {
                         enable: true,
-                        parallax: {
-                            enable: true,
-                            force: 50,
-                        },
+                        force: 50,
                     },
                 },
             },
-        }}
-    />
-{/if}
+        },
+    }}
+/>
