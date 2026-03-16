@@ -1,12 +1,10 @@
 <script lang="ts">
     import './layout.css';
     import '@fontsource/pt-serif';
-
     import { fly } from 'svelte/transition';
     import type { NavigationTarget } from '@sveltejs/kit';
     import { onNavigate } from '$app/navigation';
-    import { navigating, page } from '$app/state';
-
+    import { navigating } from '$app/state';
     import routes from '$lib/routes';
     import AboutMe from '$lib/components/AboutMe.svelte';
     import DarkModeToggle from '$lib/components/DarkModeToggle.svelte';
@@ -16,25 +14,26 @@
     import IconClose from '~icons/line-md/menu-to-close-transition';
 
     let { children } = $props();
-
     const TRANSITION_DURATION = 300;
-
-    const indexOf = (target: NavigationTarget | null | undefined) =>
+    const indexOf = (target: NavigationTarget | null) =>
         routes.findIndex(({ href }) => href === target?.route.id);
 
     // -1 if moving left, 0 if not moving, 1 if moving right
-    const direction = $derived(Math.sign(indexOf(navigating.to) - indexOf(navigating.from)));
+    const direction = $derived(
+        Math.sign(indexOf(navigating.to) - indexOf(navigating.from)),
+    );
 
     // Variables for disabling `a` tags while transitioning
     let transitioning = $state(false);
+
     let slidingOut = $state(false);
 
     onNavigate(() => {
         transitioning = true;
         slidingOut = true;
 
+        // Delay navigation to give time for sliding out
         return new Promise((res) =>
-            // Delay navigation to give time for sliding out
             setTimeout(() => {
                 res();
                 slidingOut = false;
@@ -51,17 +50,17 @@
 </script>
 
 <!-- Background -->
-<div class="absolute">
-    <Background />
-</div>
+<div class="absolute"><Background /></div>
 
 <!-- Navbar -->
-<nav class="navbar fixed top-0 z-30 h-16 w-dvw border-b-2 border-base-200 bg-base-100 shadow-sm">
+<nav
+    class="navbar fixed top-0 z-30 h-16 w-dvw border-b-2 border-base-200 bg-base-100 shadow-sm"
+>
     <div class="ml-6 navbar-start">Winston Li</div>
 
     <ul class="navbar-center hidden lg:flex">
         {#key transitioning}
-            {#each routes as { name, href }, i}
+            {#each routes as { name, href }, i (name)}
                 <!-- Add dividers in between -->
                 {#if i}
                     <div class="divider divider-horizontal"></div>
@@ -89,7 +88,7 @@
             <ul
                 class="dropdown-content menu right-0 w-32 rounded-box border-2 border-base-200 bg-base-100 shadow-sm"
             >
-                {#each routes as { name, href }}
+                {#each routes as { name, href } (name)}
                     <li class:pointer-events-none={transitioning}>
                         <MenuButton {href}>{name}</MenuButton>
                     </li>
@@ -112,10 +111,7 @@
     <div class="mx-5 flex-1 lg:mr-10">
         {#if !slidingOut}
             <div
-                in:fly={{
-                    x: `${direction}00%`,
-                    duration: TRANSITION_DURATION,
-                }}
+                in:fly={{ x: `${direction}00%`, duration: TRANSITION_DURATION }}
                 out:fly={{
                     x: `${-direction}00%`,
                     duration: TRANSITION_DURATION,

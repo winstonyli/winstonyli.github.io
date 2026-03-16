@@ -1,51 +1,38 @@
 <script lang="ts">
-    import Particles, { particlesInit } from '@tsparticles/svelte';
-    import { loadParallaxMover } from '@tsparticles/move-parallax';
+    import { onMount } from 'svelte';
+    import { tsParticles } from '@tsparticles/engine';
     import { loadTrianglesPreset } from '@tsparticles/preset-triangles';
 
-    particlesInit(async (engine) => {
-        await Promise.all([loadParallaxMover(engine), loadTrianglesPreset(engine)]);
-    });
-</script>
+    let particles: HTMLDivElement;
 
-<Particles
-    class="fixed inset-0 -z-10 h-[110vh] w-[110vw]"
-    options={{
-        preset: 'triangles',
-
-        fullScreen: false,
-        background: { opacity: 0 },
-
-        particles: {
-            number: {
-                value: 200,
-                density: { enable: true },
-            },
-
-            color: { value: 'random' },
-            shadow: { enable: true },
-
-            move: {
-                speed: 0.8,
-                attract: { enable: true },
-            },
-
-            links: {
-                color: { value: 'random' },
-                triangles: { opacity: 0.01 },
-            },
-        },
-
-        interactivity: {
-            events: {
-                onHover: {
-                    enable: true,
-                    parallax: {
-                        enable: true,
-                        force: 50,
+    onMount(async () => {
+        // @ts-expect-error funky dependencies
+        await loadTrianglesPreset(tsParticles);
+        await tsParticles.load({
+            element: particles,
+            options: {
+                fullScreen: { zIndex: -10 },
+                preset: 'triangles',
+                background: { opacity: 0 },
+                particles: {
+                    number: {
+                        value: 200,
+                        density: { enable: true },
+                    },
+                    color: { value: 'random' },
+                    shadow: { enable: true },
+                    move: {
+                        speed: 0.8,
+                        attract: { enable: true },
+                    },
+                    links: {
+                        color: { value: 'random' },
+                        triangles: { opacity: 0.01 },
                     },
                 },
             },
-        },
-    }}
-/>
+        });
+    });
+</script>
+
+<div bind:this={particles}></div>

@@ -1,8 +1,9 @@
 <script lang="ts">
     import { navigating, page } from '$app/state';
+    import { resolve } from '$app/paths';
 
     interface Props {
-        href: string;
+        href: import('$app/types').RouteId;
         children?: import('svelte').Snippet;
     }
 
@@ -13,7 +14,7 @@
 </script>
 
 <a
-    {href}
+    href={resolve(href)}
     class="link link-hover"
     class:pointer-events-none={isCurrentPage}
     class:underline={isCurrentPage || isNavigatingToPage}
