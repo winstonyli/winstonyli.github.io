@@ -4,25 +4,25 @@
 #show link: underline
 
 #let div(content) = {
-  smallcaps(content)
-  v(-3pt)
-  line(length: 100%, stroke: (thickness: 2pt, dash: "loosely-dotted"))
-  v(-5pt)
+    smallcaps(content)
+    v(-3pt)
+    line(length: 100%, stroke: (thickness: 2pt, dash: "loosely-dotted"))
+    v(-5pt)
 }
 
 #let hlist(es) = {
-  v(-6pt)
-  stack(
-    dir: ltr,
-    spacing: 2em,
-    ..es.fields().children.filter(e => e != [ ]),
-  )
+    v(-6pt)
+    stack(
+        dir: ltr,
+        spacing: 2em,
+        ..es.fields().children.filter(e => e != [ ]),
+    )
 }
 
 
 #place(top)[= #smallcaps[Winston Li]]
 
-#move(dy: 1.5pt)[#h(1fr); Updated on Apr 9, 2026.]
+#move(dy: 1.5pt)[#h(1fr); Updated on Jul 10, 2026.]
 
 #link("mailto:liwy3@uci.edu")[liwy3\@uci.edu]
 #sym.bullet
@@ -40,25 +40,25 @@ and
 #div[== Education]
 
 *UC Irvine* #sym.bullet B.S. in Computer Science w/ Honors, 3.9 / 4.0 GPA #h(1fr) Sep 2024 -- Jun 2026
+- graduated in 2 years, cum laude, UROP fellow
 #hlist[
-  - UROP Fellow
-  - Data Structures
-  - Algorithms
-  - Software Eng.
-  - Compilers
+    - UROP Fellow
+    - Data Structures
+    - Algorithms
+    - Software Eng.
+    - Compilers
 ]
 #hlist[
-  - Formal Lang. & Automata
-  - Quantum Computation
-  - Cryptography
+    - Formal Lang. & Automata
+    - Quantum Computation
+    - Cryptography
+    - Distributed Systems
 ]
 
 #div[== Projects]
 
 *Lambast* #sym.bullet Honors research project using Rust #h(1fr) Feb 2025 -- ongoing
-- Supervised by Prof. Alberto Krone-Martins.
-- Building a whole-program optimizing compiler for untyped #(sym.lambda)-calculus.
-- Researching which compiler optimizations actually benefit lazy functional languages in practice.
+- Built a whole-program optimizing compiler for untyped #(sym.lambda)-calculus.
 
 *Checkers AI* #sym.bullet class project using Python, C++, and Shell #h(1fr) Sep 2025 -- Dec 2025
 - Built Checkers AI with partner using *Monte Carlo techniques*.
