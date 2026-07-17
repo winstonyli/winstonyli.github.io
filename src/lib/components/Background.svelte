@@ -26,7 +26,7 @@
                     move: { speed: 0.2 },
                     links: {
                         color: { value: 'random' },
-                        opacity: 0.1,
+                        opacity: 0.2,
                         triangles: { opacity: 0.01 },
                     },
                 },
