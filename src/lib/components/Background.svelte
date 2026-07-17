@@ -6,7 +6,6 @@
     let particles: HTMLDivElement;
 
     onMount(async () => {
-        // @ts-expect-error funky dependencies
         await loadTrianglesPreset(tsParticles);
         await tsParticles.load({
             element: particles,
@@ -19,14 +18,15 @@
                         value: 200,
                         density: { enable: true },
                     },
-                    color: { value: 'random' },
-                    shadow: { enable: true },
-                    move: {
-                        speed: 0.8,
-                        attract: { enable: true },
+                    paint: {
+                        fill: { color: { value: 'random' }, opacity: 0.1 },
                     },
+
+                    effect: { type: 'shadow' },
+                    move: { speed: 0.2 },
                     links: {
                         color: { value: 'random' },
+                        opacity: 0.2,
                         triangles: { opacity: 0.01 },
                     },
                 },

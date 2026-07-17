@@ -4,25 +4,25 @@
 #show link: underline
 
 #let div(content) = {
-  smallcaps(content)
-  v(-3pt)
-  line(length: 100%, stroke: (thickness: 2pt, dash: "loosely-dotted"))
-  v(-5pt)
+    smallcaps(content)
+    v(-3pt)
+    line(length: 100%, stroke: (thickness: 2pt, dash: "loosely-dotted"))
+    v(-5pt)
 }
 
 #let hlist(es) = {
-  v(-6pt)
-  stack(
-    dir: ltr,
-    spacing: 2em,
-    ..es.fields().children.filter(e => e != [ ]),
-  )
+    v(-6pt)
+    stack(
+        dir: ltr,
+        spacing: 2em,
+        ..es.fields().children.filter(e => e != [ ]),
+    )
 }
 
 
 #place(top)[= #smallcaps[Winston Li]]
 
-#move(dy: 1.5pt)[#h(1fr); Updated on Apr 9, 2026.]
+#move(dy: 1.5pt)[#h(1fr); Updated on Jul 17, 2026.]
 
 #link("mailto:liwy3@uci.edu")[liwy3\@uci.edu]
 #sym.bullet
@@ -41,30 +41,34 @@ and
 
 *UC Irvine* #sym.bullet B.S. in Computer Science w/ Honors, 3.9 / 4.0 GPA #h(1fr) Sep 2024 -- Jun 2026
 #hlist[
-  - UROP Fellow
-  - Data Structures
-  - Algorithms
-  - Software Eng.
-  - Compilers
+    - graduated in 2 years
+    - ICS Honors Program
+    - UROP Fellow
 ]
 #hlist[
-  - Formal Lang. & Automata
-  - Quantum Computation
-  - Cryptography
+    - Data Structures
+    - Algorithms
+    - Software Eng.
+    - Compilers
+    - Cryptography
+]
+#hlist[
+    - Formal Lang. & Automata
+    - Quantum Computation
+    - Distributed Systems
 ]
 
 #div[== Projects]
 
-*Lambast* #sym.bullet Honors research project using Rust #h(1fr) Feb 2025 -- ongoing
-- Supervised by Prof. Alberto Krone-Martins.
-- Building a whole-program optimizing compiler for untyped #(sym.lambda)-calculus.
-- Researching which compiler optimizations actually benefit lazy functional languages in practice.
+*Lambast* #sym.bullet _Honors research project using Rust_ #h(1fr) Feb 2025 -- ongoing
+- Built a whole-program optimizing compiler for untyped #(sym.lambda)-calculus.
+- Presented preliminary research at UCI Undergraduate Research Symposium.
 
-*Checkers AI* #sym.bullet class project using Python, C++, and Shell #h(1fr) Sep 2025 -- Dec 2025
+*Checkers AI* #sym.bullet _class project using Python, C++, Shell_ #h(1fr) Sep 2025 -- Dec 2025
 - Built Checkers AI with partner using *Monte Carlo techniques*.
 - Created auxiliary *Python* and *Shell* scripts for testing, benchmarking, and profiling.
 
-*Misc. websites* #sym.bullet personal projects using Svelte, TypeScript, Tailwind, and GitHub Pages #h(1fr) 2023 -- 2024
+*Misc. websites* #sym.bullet _personal projects using Svelte, TS, Tailwind, GitHub Pages_ #h(1fr) 2023 -- 2024
 - Reduced served asset sizes by *58-70%* via precompilation and WebP compression techniques.
 - Implemented directional page transitions with *View Transitions API* and *Svelte* transitions.
 - Statically hosted Wordles; integrated seedable PRNG to select "answer of the day" w/o backend.
@@ -83,7 +87,7 @@ and
 #div[== Experience]
 
 *Learning Assistant* #sym.bullet UC Irvine #h(1fr) Mar 2025 -- ongoing
-- Delivered effective supplementary pedagogy for *Python* and upper-div *Algorithms,* such as alternate explanation of Master Theorem.
+- Delivered effective supplementary pedagogy for *Python* and upper-div *Algorithms,* e.g., alternate explanation of Master Theorem.
 - Spearheaded study sessions to identify and guide students through gaps in understanding.
 - Coordinated with professors via weekly meetings to enhance student learning.
 
