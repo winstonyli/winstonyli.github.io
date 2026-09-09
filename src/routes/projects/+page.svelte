@@ -34,7 +34,7 @@
     <Project
         title="Wordleverse"
         status="completed in Fall '24"
-        blurb="Wordle clones on Github Pages."
+        blurb="Wordle clones on Github Pages with precompiled, WebP-compressed assets. Seedable PRNG picks the answer of the day with no backend."
         src={wordleverseSrc}
         href="https://winstonyli.github.io/wordleverse"
         fields={['UI/UX', 'Web']}
@@ -74,7 +74,6 @@
         status="completed in Summer '23"
         blurb="Website for local organization. Link now defunct."
         src={themendingnoteSrc}
-        href="https://www.themendingnote.org"
         fields={['UI/UX', 'Web']}
         tools={['Svelte', 'TypeScript']}
     />

@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "build": "bun run build:typst && vite build",
-        "build:typst": "bunx typst compile src/lib/assets/resume.typ static/resume.pdf",
+        "build:typst": "bunx typst compile --input variant=phd src/lib/assets/resume.typ static/resume.pdf",
+        "build:typst:industry": "bunx typst compile --input variant=industry src/lib/assets/resume.typ resume-industry.pdf",
         "lint": "prettier --check . && eslint .",
         "format": "prettier --write ."
     },
@@ -33,7 +34,7 @@
         "svelte-check": "^4.7.2",
         "tailwindcss": "^4.3.2",
         "tslib": "^2.8.1",
-        "typescript": "^7.0.2",
+        "typescript": "^5.9.3",
         "typescript-eslint": "^8.63.0",
         "unplugin-icons": "^23.0.1"
     }
