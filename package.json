@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "build": "bun run build:typst && vite build",
-        "build:typst": "bunx typst compile src/lib/assets/resume.typ static/resume.pdf",
+        "build:typst": "bunx typst compile --input variant=phd src/lib/assets/resume.typ static/resume.pdf",
+        "build:typst:industry": "bunx typst compile --input variant=industry src/lib/assets/resume.typ resume-industry.pdf",
         "lint": "prettier --check . && eslint .",
         "format": "prettier --write ."
     },
