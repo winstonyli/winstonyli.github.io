@@ -18,6 +18,7 @@
     class="link link-hover"
     class:pointer-events-none={isCurrentPage}
     class:underline={isCurrentPage || isNavigatingToPage}
+    aria-current={isCurrentPage ? 'page' : undefined}
 >
     {@render children?.()}
 </a>
