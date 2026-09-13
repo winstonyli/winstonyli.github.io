@@ -77,7 +77,10 @@
         <DarkModeToggle />
 
         <details bind:open={isMenuOpen} class="group dropdown lg:hidden">
-            <summary class="btn btn-circle btn-ghost">
+            <summary
+                class="btn btn-circle btn-ghost"
+                aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            >
                 {#if isMenuOpen}
                     <IconClose class="size-6" />
                 {:else}

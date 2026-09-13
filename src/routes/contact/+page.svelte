@@ -15,17 +15,26 @@
 </p>
 
 <div class="flex gap-3">
-    <a href="mailto:liwy3@uci.edu" class="btn btn-circle btn-primary">
+    <a
+        href="mailto:liwy3@uci.edu"
+        class="btn btn-circle btn-primary"
+        aria-label="Email"
+    >
         <IconEmail />
     </a>
 
-    <a href="https://github.com/winstonyli" class="btn btn-circle btn-primary">
+    <a
+        href="https://github.com/winstonyli"
+        class="btn btn-circle btn-primary"
+        aria-label="GitHub"
+    >
         <IconGithub />
     </a>
 
     <a
         href="https://www.instagram.com/winstonyli"
         class="btn btn-circle btn-primary"
+        aria-label="Instagram"
     >
         <IconInstagram />
     </a>
@@ -33,6 +42,7 @@
     <a
         href="https://www.linkedin.com/in/winstonyli"
         class="btn btn-circle btn-primary"
+        aria-label="LinkedIn"
     >
         <IconLinkedin />
     </a>
