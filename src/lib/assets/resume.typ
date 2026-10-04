@@ -25,7 +25,7 @@
 
 #place(top)[= #smallcaps[Winston Li]]
 
-#move(dy: 1.5pt)[#h(1fr); Updated on Sep 8, 2026.]
+#move(dy: 1.5pt)[#h(1fr); Updated on Oct 4, 2026.]
 
 #link("mailto:liwy3@uci.edu")[liwy3\@uci.edu]
 #sym.bullet
@@ -37,6 +37,10 @@ winstonyli on
 #link("https://github.com/winstonyli")[Github]
 and
 #link("https://www.linkedin.com/in/winstonyli")[LinkedIn]
+
+#if not is-phd [
+    _Builds systems from scratch across PL, ML, and the web._
+]
 
 
 
@@ -81,23 +85,52 @@ and
 #lambast-detail
 ]
 
-#let checkers-ai = [
-*Checkers AI* #sym.bullet _class project using Python, C++, Shell_ #h(1fr) Sep 2025 -- Dec 2025
-- Built Checkers AI with partner using *Monte Carlo techniques*; ranked in the *top 30%* of the class tournament.
-- Created auxiliary *Python* and *Shell* scripts for testing, benchmarking, and profiling.
+#let tatic-detail = if is-phd [
+- Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
+- Checks compiled code against an interpreter and, where possible, a *kernel-checked proof*.
+] else [
+- Built a *JIT* that caches compiled *WebAssembly* by content hash; a criterion benchmark exposed and fixed an unbounded-memory leak.
 ]
 
-#let misc-websites = [
-*Misc. websites* #sym.bullet _personal projects using Svelte, TS, Tailwind, GitHub Pages_ #h(1fr) 2023 -- 2024
-- Reduced served asset sizes by *58-70%* via precompilation and WebP compression techniques.
-- Implemented directional page transitions with *View Transitions API* and *Svelte* transitions.
-- Statically hosted Wordles; integrated seedable PRNG to select "answer of the day" w/o backend.
+#let tatic = [
+*tatic* #sym.bullet _#(if is-phd [Rust, WebAssembly, dependent type theory] else [Rust, WebAssembly])_ #h(1fr) Mar 2026 -- Present
+#tatic-detail
+]
+
+#let renno = [
+*renno* #sym.bullet _Rust_ #h(1fr) Sep 2026 -- Present
+- Built a scripting language on a *CEK machine* with multi-shot *algebraic effect handlers*.
+- Added *gradual typing*, row-polymorphic effect checking, and refinement predicates; 426 tests.
+]
+
+#let cereal = [
+*cereal* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
+- Wrote a C99 preprocessor in C99 with macro lint, tested by token diffs against `gcc -E`.
+- Added an LSP index and parallel `-E` with byte-identical output.
+]
+
+#let manifold = [
+*manifold* #sym.bullet _Rust, wgpu, CEF, Servo_ #h(1fr) Sep 2026 -- Present
+- Built a browser where each tab runs on a different engine (Blink, Servo, WebKit) and swaps live, via per-engine processes over IPC.
+- Added crash recovery and a force-directed tab graph, composited with *wgpu*.
+]
+
+#let scratchtape = [
+*scratchtape* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
+- Built an ML engine from scratch (autodiff, layers, GPU backend); every primitive is gradient-checked.
+- Measured DX12 at 4--7$times$ lower per-call overhead than Vulkan on an eGPU; kernels reach up to 900 GFLOP/s.
+]
+
+#let apps-web = [
+*Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
+- *arrow-game*: browser roguelite in strict TS, zero dependencies, 321 tests verified on two JS engines.
+- *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
 ]
 
 #let project-order = if is-phd {
-    (lambast, checkers-ai, misc-websites)
+    (tatic, lambast, renno, cereal)
 } else {
-    (misc-websites, checkers-ai, lambast)
+    (manifold, scratchtape, tatic, apps-web)
 }
 
 #for project in project-order [
@@ -110,25 +143,24 @@ and
 
 *Proficient* in Rust, C / C++, JS / TS, Python, Svelte, Tailwind.
 
-*Familiar* with Git, HTML / CSS, Nix, LaTeX, Typst, Unix systems & shells.
+*Familiar* with Git, HTML / CSS, Nix, LaTeX, Typst, Claude Code, Unix systems & shells.
 
 *Acquainted* with most mainstream languages, e.g., C\#, Go, Haskell, Java, Lua, Ruby, SQL.
 
 #if is-phd [
 *Research interests* $approx$ programming language design & theory.
+] else [
+*Domains:* compilers & PL, ML & GPU compute, browsers & the web, developer tooling.
 ]
 
 #div[== Experience]
 
 *Learning Assistant* #sym.bullet UC Irvine #h(1fr) Mar 2025 -- Jun 2026
-- Delivered supplementary pedagogy for *Python* and upper-div *Algorithms,* e.g., alternate explanation of Master Theorem.
+- Delivered supplementary pedagogy for *Python* and upper-div *Algorithms,* e.g., Master Theorem.
 - Spearheaded study sessions to identify and guide students through gaps in understanding.
 
 *Intern* #sym.bullet LGBTQIA+ Identity Commission \@ UC Irvine #h(1fr) Oct 2024 -- Jun 2025
-- Facilitated outreach efforts to students and orgs in collaboration with 8 other interns.
 - Led a team of 3 to organize and host themed Gayme Show™.
 
 *Programmer* #sym.bullet Video Game Development Club \@ UC Irvine #h(1fr) Sep 2024 -- May 2025
-- Worked with team of 13 to create typing game in *C\#* and *Unity*.
-- Led dev of main UI window, e.g., responsive user input handling and real-time feedback.
-- Leveraged *Git* and *Trello* to streamline collaboration between departments.
+- Worked with team of 13 to create typing game in *C\#* and *Unity*; led dev of the main UI window.
