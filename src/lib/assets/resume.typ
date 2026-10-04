@@ -111,19 +111,19 @@ and
 
 #let manifold = [
 *manifold* #sym.bullet _Rust, wgpu, CEF, Servo_ #h(1fr) Sep 2026 -- Present
-- Built a browser where each tab runs on a different engine (Blink, Servo, WebKit) and swaps live, via per-engine processes over IPC.
-- Added crash recovery and a force-directed tab graph, composited with *wgpu*.
+- Built a browser running each tab in its own engine process (Blink via CEF/WebView2, Servo, WebKitGTK) over IPC, with in-place engine hot-swap.
+- Added crash recovery, journaled sessions, and a force-directed tab graph on *wgpu*.
 ]
 
 #let scratchtape = [
 *scratchtape* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
 - Built an ML engine from scratch (autodiff, layers, GPU backend); every primitive is gradient-checked.
-- Measured DX12 at 4--7$times$ lower per-call overhead than Vulkan on an eGPU; kernels reach up to 900 GFLOP/s.
+- Measured DX12 at 4--7$times$ lower per-call overhead than Vulkan on an eGPU; up to 900 GFLOP/s.
 ]
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *arrow-game*: browser roguelite in strict TS, no runtime dependencies, 321 tests passing on Bun and Node.
+- *arrow-game*: strict-TS browser roguelite, no runtime dependencies; 321 tests pass on Bun and Node.
 - *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
 ]
 
