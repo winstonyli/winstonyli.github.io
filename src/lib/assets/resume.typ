@@ -105,8 +105,8 @@ and
 
 #let cereal = [
 *cereal* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
-- Wrote a C99 preprocessor in C99 with macro lint, tested by token diffs against `gcc -E`.
-- Added an LSP index and parallel `-E` with byte-identical output.
+- Wrote a C99/GNU front end in C99: GCC-compatible preprocessor with macro lint, parser, and checker.
+- Matches gcc-13 diagnostics on over 96% of gcc.dg; parallel `-E` is fuzzed for identical output.
 ]
 
 #let manifold = [
@@ -123,7 +123,7 @@ and
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *arrow-game*: browser roguelite in strict TS, zero dependencies, 321 tests verified on two JS engines.
+- *arrow-game*: browser roguelite in strict TS, no runtime dependencies, 321 tests passing on Bun and Node.
 - *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
 ]
 
