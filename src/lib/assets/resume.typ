@@ -100,7 +100,7 @@ and
 #let renno = [
 *renno* #sym.bullet _Rust_ #h(1fr) Sep 2026 -- Present
 - Built a scripting language on a *CEK machine* with multi-shot *algebraic effect handlers*.
-- Added *gradual typing*, row-polymorphic effect checking, and refinement predicates; 426 tests.
+- Added *gradual typing*, row-polymorphic effect checking, and refinement predicates; 400+ tests.
 ]
 
 #let cereal = [
@@ -123,7 +123,7 @@ and
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *arrow-game*: strict-TS browser roguelite, no runtime dependencies; 321 tests pass on Bun and Node.
+- *arrow-game*: strict-TS browser roguelite, no runtime dependencies; 300+ tests on Bun, Node.
 - *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
 ]
 
@@ -150,7 +150,7 @@ and
 #if is-phd [
 *Research interests* $approx$ programming language design & theory.
 ] else [
-*Domains:* compilers & PL, ML & GPU compute, browsers & the web, developer tooling.
+*Domains:* compilers & PL, ML & GPU compute, browsers, full-stack web apps, developer tooling.
 ]
 
 #div[== Experience]
