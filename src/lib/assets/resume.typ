@@ -105,8 +105,8 @@ and
 
 #let cereal = [
 *cereal* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
-- Wrote a C99/GNU front end in C99: GCC-compatible preprocessor with macro lint, parser, and checker.
-- Matches gcc-13 diagnostics on over 96% of gcc.dg; parallel `-E` is fuzzed for identical output.
+- Wrote a C99/GNU front end in C99: GCC-compatible preprocessor, macro lint, parser, checker.
+- Matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests; parallel `-E` is fuzzed for identical output.
 ]
 
 #let manifold = [
