@@ -93,12 +93,12 @@ and
 ]
 
 #let tatic = [
-*tatic* #sym.bullet _#(if is-phd [Rust, WebAssembly, dependent type theory] else [Rust, WebAssembly])_ #h(1fr) Mar 2026 -- Present
+*#link("https://github.com/winstonyli/tatic")[tatic]* #sym.bullet _#(if is-phd [Rust, WebAssembly, dependent type theory] else [Rust, WebAssembly])_ #h(1fr) Mar 2026 -- Present
 #tatic-detail
 ]
 
 #let renno = [
-*renno* #sym.bullet _Rust_ #h(1fr) Sep 2026 -- Present
+*#link("https://github.com/winstonyli/renno")[renno]* #sym.bullet _Rust_ #h(1fr) Sep 2026 -- Present
 - Built a scripting language on a *CEK machine* with multi-shot *algebraic effect handlers*.
 - Added *gradual typing*, row-polymorphic effect checking, and refinement predicates; 400+ tests.
 ]
@@ -111,7 +111,7 @@ and
 ]
 
 #let cereal = [
-*cereal* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
+*#link("https://github.com/winstonyli/cereal")[cereal]* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
 #cereal-detail
 ]
 
@@ -122,14 +122,14 @@ and
 ]
 
 #let scratchtape = [
-*scratchtape* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
+*#link("https://github.com/winstonyli/scratchtape")[scratchtape]* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
 - Built an ML engine from scratch (autodiff, layers, GPU backend); every primitive is gradient-checked.
 - Measured DX12 at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
 ]
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *arrow-game*: strict-TS browser roguelite, no runtime dependencies; 300+ tests on Bun, Node.
+- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 300+ tests on Bun, Node.
 - *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
 ]
 
