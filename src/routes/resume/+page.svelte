@@ -31,20 +31,24 @@
     }
 </script>
 
-<div role="tablist" class="mb-4 tabs-border tabs">
-    {#each Object.entries(variants) as [key, { label }] (key)}
-        <button
-            role="tab"
-            class="tab"
-            class:tab-active={variant === key}
-            onclick={() => select(key as Variant)}
-        >
-            {label}
-        </button>
-    {/each}
-</div>
-
-<article class="not-prose relative -m-[1cm] mt-[calc(1rem-1cm)] select-none">
+<article
+    class="not-prose relative -mx-[1cm] -mt-[calc(1cm-2rem)] -mb-[1cm] select-none"
+>
+    <div
+        role="tablist"
+        class="absolute bottom-full left-0 tabs-lift tabs tabs-sm"
+    >
+        {#each Object.entries(variants) as [key, { label }] (key)}
+            <button
+                role="tab"
+                class="tab"
+                class:tab-active={variant === key}
+                onclick={() => select(key as Variant)}
+            >
+                {label}
+            </button>
+        {/each}
+    </div>
     <!-- eslint-disable-next-line svelte/no-at-html-tags -->
     {@html variants[variant].svg}
     <a
