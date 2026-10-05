@@ -14,3 +14,7 @@ Built using:
 
 - Disable transitions for reduced motion
 - Handle Typst assets better
+
+## Docs
+
+- [Resume](docs/resume.md): variants, build, claims to re-check, publishing rules
