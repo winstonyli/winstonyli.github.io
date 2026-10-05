@@ -89,7 +89,7 @@ and
 - Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
 - Checks compiled code against an interpreter and, where possible, a *kernel-checked proof*.
 ] else [
-- Built a *JIT* that caches compiled *WebAssembly* by content hash; a criterion benchmark exposed and fixed an unbounded-memory leak.
+- Built a *JIT* caching compiled *WebAssembly* by content hash; fixed a leak found by benchmark.
 ]
 
 #let tatic = [
@@ -103,10 +103,16 @@ and
 - Added *gradual typing*, row-polymorphic effect checking, and refinement predicates; 400+ tests.
 ]
 
-#let cereal = [
-*cereal* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
+#let cereal-detail = if is-phd [
 - Wrote a C99/GNU front end in C99: GCC-compatible preprocessor, macro lint, parser, checker.
 - Matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests; parallel `-E` is fuzzed for identical output.
+] else [
+- Wrote a C99 compiler front end in C99 that matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests.
+]
+
+#let cereal = [
+*cereal* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
+#cereal-detail
 ]
 
 #let manifold = [
@@ -118,7 +124,7 @@ and
 #let scratchtape = [
 *scratchtape* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
 - Built an ML engine from scratch (autodiff, layers, GPU backend); every primitive is gradient-checked.
-- Measured DX12 at 1.6--5.8$times$ lower per-call overhead than Vulkan on small matmuls (eGPU); up to 900 GFLOP/s.
+- Measured DX12 at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
 ]
 
 #let apps-web = [
@@ -130,7 +136,7 @@ and
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, tatic, apps-web)
+    (manifold, scratchtape, tatic, cereal, apps-web)
 }
 
 #for project in project-order [
