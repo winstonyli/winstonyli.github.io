@@ -25,7 +25,7 @@
 
 #place(top)[= #smallcaps[Winston Li]]
 
-#move(dy: 1.5pt)[#h(1fr); Updated on Oct 4, 2026.]
+#move(dy: 1.5pt)[#h(1fr); Updated on Oct 5, 2026.]
 
 #link("mailto:liwy3@uci.edu")[liwy3\@uci.edu]
 #sym.bullet
