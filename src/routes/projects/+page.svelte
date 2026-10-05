@@ -12,12 +12,79 @@
 
 <div class="divider"><IconIdea class="size-24" /></div>
 
+<h2>2026</h2>
+
+<div class="flex flex-wrap gap-3">
+    <Project
+        title="tatic"
+        status="Mar 2026 – present"
+        blurb="JIT for a higher-order language: caches compiled WebAssembly by content hash and checks it against an interpreter and, where possible, a kernel-checked proof."
+        href="https://github.com/winstonyli/tatic"
+        fields={['PL']}
+        tools={['Rust', 'WebAssembly']}
+    />
+
+    <Project
+        title="scratchtape"
+        status="Sep 2026 – present"
+        blurb="ML engine from scratch: autodiff, layers, and a wgpu GPU backend, with every primitive gradient-checked."
+        href="https://github.com/winstonyli/scratchtape"
+        fields={['AI', 'GPU']}
+        tools={['Rust', 'wgpu']}
+    />
+
+    <Project
+        title="renno"
+        status="Sep 2026 – present"
+        blurb="Scripting language on a CEK machine with algebraic effect handlers, gradual typing, and refinement predicates."
+        href="https://github.com/winstonyli/renno"
+        fields={['PL']}
+        tools={['Rust']}
+    />
+
+    <Project
+        title="cereal"
+        status="Sep 2026 – present"
+        blurb="C99 compiler front end written in C99; matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests."
+        href="https://github.com/winstonyli/cereal"
+        fields={['PL']}
+        tools={['C99']}
+    />
+
+    <Project
+        title="arrow-game"
+        status="Sep 2026 – present; playable demo"
+        blurb="Browser archer roguelite in strict TypeScript with no runtime dependencies."
+        href="https://winstonyli.github.io/arrow-game/"
+        fields={['Game', 'Web']}
+        tools={['TypeScript', 'Vite']}
+    />
+
+    <Project
+        title="manifold"
+        status="Sep 2026 – present; private for now"
+        blurb="Browser where each tab runs in its own engine process (Blink, Servo, or WebKitGTK), with in-place engine hot-swap."
+        fields={['Web', 'GPU']}
+        tools={['Rust', 'wgpu']}
+    />
+
+    <Project
+        title="lollipoppy"
+        status="Sep 2026 – present; private for now"
+        blurb="League of Legends companion desktop app for builds, notes, and champ select."
+        fields={['Full Stack']}
+        tools={['Tauri', 'Svelte']}
+    />
+</div>
+
+<h2>Older</h2>
+
 <p>some older projects are included for funsies.</p>
 
 <div class="flex flex-wrap gap-3">
     <Project
         title="Lambast"
-        status="current ICS Honors & UROP project"
+        status="completed Jun 2026 (ICS Honors & UROP project)"
         blurb="Optimizing compiler for the untyped lambda calculus."
         fields={['PL']}
         tools={['Rust']}
@@ -62,14 +129,6 @@
     />
 
     <Project
-        title="Roanluder"
-        status="on hiatus because i kept restarting it"
-        blurb="Full-stack League of Legends companion app."
-        fields={['Full Stack']}
-        tools={['Rust', 'Svelte', 'TypeScript']}
-    />
-
-    <Project
         title="themendingnote"
         status="completed in Summer '23"
         blurb="Website for local organization. Link now defunct."
@@ -79,7 +138,7 @@
     />
 
     <Project
-        title="Renno"
+        title="Renno (2023)"
         status="completed in Spring '23"
         blurb="Baby's first language (with static analysis and multi-stage lowering)."
         src={rennoSrc}
