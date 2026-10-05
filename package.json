@@ -4,8 +4,7 @@
     "private": true,
     "scripts": {
         "build": "bun run build:typst && vite build",
-        "build:typst": "node scripts/build-resume.mjs phd static/resume.pdf",
-        "build:typst:industry": "node scripts/build-resume.mjs industry resume-industry.pdf",
+        "build:typst": "node scripts/build-resume.mjs phd static/resume.pdf && node scripts/build-resume.mjs industry static/resume-industry.pdf",
         "lint": "prettier --check . && eslint .",
         "format": "prettier --write ."
     },

@@ -28,7 +28,14 @@
 
     let slidingOut = $state(false);
 
-    onNavigate(() => {
+    // Top-level section of a route, so /resume and /resume/industry count as one
+    const section = (target: NavigationTarget | null) =>
+        target?.route.id?.split('/')[1];
+
+    onNavigate((nav) => {
+        // Switching tabs within a section skips the slide transition
+        if (section(nav.from) === section(nav.to)) return;
+
         transitioning = true;
         slidingOut = true;
 
@@ -102,7 +109,7 @@
 </nav>
 
 <!-- Actual page content -->
-<main class="mt-5 flex w-dvw items-start justify-around gap-10 pt-16">
+<main class="mt-10 flex w-dvw items-start justify-around gap-10 pt-16">
     <!-- About me (desktop, on all routes) -->
     <div
         class="z-10 hidden w-96 justify-between rounded-r-box border-y-2 border-r-2 border-base-200 bg-base-100 p-8 shadow-sm lg:block"

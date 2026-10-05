@@ -20,7 +20,11 @@ function typst(): Plugin {
         name: 'rollup-plugin-typst',
         transform(code, id) {
             if (id.endsWith('.typ'))
-                return `export default ${JSON.stringify(typst.svg({ mainFilePath: id, inputs: { variant: 'phd' } }))}`;
+            {
+                const svg = (variant: string) =>
+                    JSON.stringify(typst.svg({ mainFilePath: id, inputs: { variant } }));
+                return `export default ${svg('phd')}; export const industry = ${svg('industry')};`;
+            }
         },
     };
 }
