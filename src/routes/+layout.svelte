@@ -28,7 +28,14 @@
 
     let slidingOut = $state(false);
 
-    onNavigate(() => {
+    // Top-level section of a route, so /resume and /resume/industry count as one
+    const section = (target: NavigationTarget | null) =>
+        target?.route.id?.split('/')[1];
+
+    onNavigate((nav) => {
+        // Switching tabs within a section skips the slide transition
+        if (section(nav.from) === section(nav.to)) return;
+
         transitioning = true;
         slidingOut = true;
 

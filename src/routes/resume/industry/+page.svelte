@@ -2,4 +2,4 @@
     import Resume from '$lib/components/Resume.svelte';
 </script>
 
-<Resume variant="phd" />
+<Resume variant="industry" />

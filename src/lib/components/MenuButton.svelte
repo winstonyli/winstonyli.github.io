@@ -9,7 +9,10 @@
 
     let { href, children }: Props = $props();
 
-    let isCurrentPage = $derived(page.route.id === href);
+    let isCurrentPage = $derived(
+        page.route.id === href ||
+            (href !== '/' && !!page.route.id?.startsWith(`${href}/`)),
+    );
     let isNavigatingToPage = $derived(navigating.to?.route.id === href);
 </script>
 
