@@ -14,14 +14,14 @@ One Typst source, two variants. Last reviewed 2026-10-05.
 
 ## Claims to re-check when a repo changes
 
-| Claim                                                        | Source                             | Note                                                                    |
-| ------------------------------------------------------------ | ---------------------------------- | ----------------------------------------------------------------------- |
-| scratchtape: DX12 1.6--5.8$times$ lower overhead than Vulkan | scratchtape README, idle-GPU rerun | Not the first run's 7x (GPU was shared). Applies to small matmuls only. |
-| scratchtape: up to 900 GFLOP/s                               | scratchtape README                 | Naive kernel at training shapes.                                        |
-| cereal: 96% of 3,700+ gcc.dg tests                           | cereal STATUS.md                   | Pushed state only. The local repo may be ahead.                         |
-| renno: 400+ tests                                            | `cargo test`                       | 422 passed on 2026-10-04.                                               |
-| arrow-game: 300+ tests                                       | `bun test`                         | README says 369.                                                        |
-| tatic: "where possible" kernel-checked proof                 | tatic README                       | Do not drop the qualifier.                                              |
+| Claim                                                        | Source                                   | Note                                                                                                                        |
+| ------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| scratchtape: DX12 1.6--5.8$times$ lower overhead than Vulkan | scratchtape README, idle-GPU rerun       | Not the first run's 7x (GPU was shared). Applies to small matmuls only.                                                     |
+| scratchtape: up to 900 GFLOP/s                               | scratchtape README                       | Naive kernel at training shapes.                                                                                            |
+| cereal: 96% of 3,700+ gcc.dg tests                           | cereal README.md ("N of 3744 in gcc.dg") | Stale: the pushed README says 3671 of 3744 (98%), local says 3696 (98.7%). Recompute and update when cereal is next pushed. |
+| renno: 400+ tests                                            | `cargo test`                             | 422 passed on 2026-10-04.                                                                                                   |
+| arrow-game: 300+ tests                                       | `bun test`                               | README says 369.                                                                                                            |
+| tatic: "where possible" kernel-checked proof                 | tatic README                             | Do not drop the qualifier.                                                                                                  |
 
 ## Public and private
 
