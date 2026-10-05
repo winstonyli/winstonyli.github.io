@@ -34,7 +34,7 @@
 #link("https://winstonyli.github.io")[winstonyli.github.io]
 #sym.bullet
 winstonyli on
-#link("https://github.com/winstonyli")[Github]
+#link("https://github.com/winstonyli")[GitHub]
 and
 #link("https://www.linkedin.com/in/winstonyli")[LinkedIn]
 
@@ -156,7 +156,7 @@ and
 #if is-phd [
 *Research interests* $approx$ programming language design & theory.
 ] else [
-*Domains:* compilers & PL, ML & GPU compute, browsers, full-stack web apps, developer tooling.
+*Domains:* compilers & PL, ML & GPU compute, browsers, web & desktop apps, developer tooling.
 ]
 
 #div[== Experience]
