@@ -10,7 +10,12 @@
     let { variant }: Props = $props();
 
     const variants = {
-        phd: { label: 'Research', svg: phd, pdf: '/resume.pdf', href: '/resume' },
+        phd: {
+            label: 'Research',
+            svg: phd,
+            pdf: '/resume.pdf',
+            href: '/resume',
+        },
         industry: {
             label: 'Industry',
             svg: industry,
