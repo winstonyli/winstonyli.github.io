@@ -31,12 +31,10 @@
     }
 </script>
 
-<article
-    class="not-prose relative -mx-[1cm] -mt-[calc(1cm-2rem)] -mb-[1cm] select-none"
->
+<article class="not-prose relative -m-[1cm] select-none">
     <div
         role="tablist"
-        class="absolute bottom-full left-0 tabs-lift tabs tabs-sm"
+        class="absolute bottom-full left-6 translate-y-1.5 tabs-lift tabs [--tab-height:1.25rem] tabs-xs"
     >
         {#each Object.entries(variants) as [key, { label }] (key)}
             <button
