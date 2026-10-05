@@ -31,7 +31,7 @@
     }
 </script>
 
-<div role="tablist" class="tabs-box mb-4 tabs w-fit">
+<div role="tablist" class="mb-4 tabs-border tabs">
     {#each Object.entries(variants) as [key, { label }] (key)}
         <button
             role="tab"
