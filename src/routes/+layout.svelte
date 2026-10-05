@@ -102,7 +102,7 @@
 </nav>
 
 <!-- Actual page content -->
-<main class="mt-5 flex w-dvw items-start justify-around gap-10 pt-16">
+<main class="mt-10 flex w-dvw items-start justify-around gap-10 pt-16">
     <!-- About me (desktop, on all routes) -->
     <div
         class="z-10 hidden w-96 justify-between rounded-r-box border-y-2 border-r-2 border-base-200 bg-base-100 p-8 shadow-sm lg:block"

@@ -34,12 +34,12 @@
 <article class="not-prose relative -m-[1cm] select-none">
     <div
         role="tablist"
-        class="absolute bottom-full left-6 translate-y-1.5 tabs-lift tabs [--tab-height:1.25rem] tabs-xs"
+        class="absolute bottom-full left-6 translate-y-1.5 tabs-lift tabs [--border:2px] tabs-md"
     >
         {#each Object.entries(variants) as [key, { label }] (key)}
             <button
                 role="tab"
-                class="tab"
+                class="tab [--tab-border-color:var(--color-base-200)]!"
                 class:tab-active={variant === key}
                 onclick={() => select(key as Variant)}
             >
