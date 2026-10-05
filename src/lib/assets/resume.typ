@@ -118,7 +118,7 @@ and
 #let scratchtape = [
 *scratchtape* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
 - Built an ML engine from scratch (autodiff, layers, GPU backend); every primitive is gradient-checked.
-- Measured DX12 at 4--7$times$ lower per-call overhead than Vulkan on an eGPU; up to 900 GFLOP/s.
+- Measured DX12 at 1.6--5.8$times$ lower per-call overhead than Vulkan on small matmuls (eGPU); up to 900 GFLOP/s.
 ]
 
 #let apps-web = [
