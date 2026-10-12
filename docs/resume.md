@@ -1,6 +1,6 @@
 # Resume
 
-One Typst source, two variants. Last reviewed 2026-10-05.
+One Typst source, two variants. Last reviewed 2026-10-12.
 
 ## How it works
 
@@ -14,14 +14,16 @@ One Typst source, two variants. Last reviewed 2026-10-05.
 
 ## Claims to re-check when a repo changes
 
-| Claim                                                        | Source                                   | Note                                                                                                                        |
-| ------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| scratchtape: DX12 1.6--5.8$times$ lower overhead than Vulkan | scratchtape README, idle-GPU rerun       | Not the first run's 7x (GPU was shared). Applies to small matmuls only.                                                     |
-| scratchtape: up to 900 GFLOP/s                               | scratchtape README                       | Naive kernel at training shapes.                                                                                            |
-| cereal: 96% of 3,700+ gcc.dg tests                           | cereal README.md ("N of 3744 in gcc.dg") | Stale: the pushed README says 3671 of 3744 (98%), local says 3696 (98.7%). Recompute and update when cereal is next pushed. |
-| renno: 400+ tests                                            | `cargo test`                             | 422 passed on 2026-10-04.                                                                                                   |
-| arrow-game: 300+ tests                                       | `bun test`                               | README says 369.                                                                                                            |
-| tatic: "where possible" kernel-checked proof                 | tatic README                             | Do not drop the qualifier.                                                                                                  |
+| Claim                                                        | Source                               | Note                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| scratchtape: DX12 1.6--5.8$times$ lower overhead than Vulkan | scratchtape README, idle-GPU rerun   | Not the first run's 7x (GPU was shared). Applies to small matmuls only.                                                                                                                                                                   |
+| scratchtape: up to 900 GFLOP/s                               | scratchtape README                   | Naive kernel at training shapes.                                                                                                                                                                                                          |
+| cereal: 3,908 of 3,910 runnable gcc.dg tests                 | cereal README.md:69, STATUS.md:33    | "Runnable" matters: 3,910 is the files `bench/tools/par.py` runs (it skips tests with target selectors, other `-std`, unsupported options). The repo gives no total. c-c++-common is 637/638 in STATUS.md; the README's 634/636 is stale. |
+| cereal: language server                                      | cereal STATUS.md:39-43, B4_DESIGN.md | Partial: workspace/symbol covers open units only, no cross-file references or workspace index (B5), rename edits one file. Checked against clangd on 6 files. Do not claim self-hosting.                                                  |
+| renno: 400+ tests                                            | `cargo test`                         | 422 passed on 2026-10-04; 610 `#[test]` attributes on 2026-10-12 (not run). Run `cargo test` before quoting a bigger number.                                                                                                              |
+| manifold: 80k-line                                           | `git ls-files '*.rs'` line count     | 80,768 lines, 7 crates, 2026-10-12. Private repo.                                                                                                                                                                                         |
+| arrow-game: 300+ tests                                       | `bun test`                           | Local README says 426 (435 `test()` declarations). Pushed README is older; push before raising the claim.                                                                                                                                 |
+| tatic: "where possible" kernel-checked proof                 | tatic README                         | Do not drop the qualifier.                                                                                                                                                                                                                |
 
 ## Public and private
 
@@ -31,5 +33,7 @@ One Typst source, two variants. Last reviewed 2026-10-05.
 
 ## Open items
 
-- cereal has 8 local commits not yet pushed. When pushed, re-audit them and re-check the cereal bullet.
+- arrow-game has 30 local commits not pushed (danger rings, evolved steering bot, balance work). Push, then raise "300+ tests" to "400+" and consider an evolved-bot bullet.
+- Considered and parked (2026-10-12): tatic rule-mining results (single runs, one theory, mixed; Research-only line at most); scratchtape kNN/IVF speedups (single unrepeated runs) and the CPU-vs-GPU training time (4.5 h CPU figure may be extrapolated); manifold per-frame and stuck-engine numbers (measured on a loaded machine).
+- cereal is fully pushed as of 2026-10-12.
 - Pages is built from `main` by GitHub Actions; confirm `/resume/` and the PDFs after any change.

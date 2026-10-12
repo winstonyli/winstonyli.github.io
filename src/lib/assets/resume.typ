@@ -25,7 +25,7 @@
 
 #place(top)[= #smallcaps[Winston Li]]
 
-#move(dy: 1.5pt)[#h(1fr); Updated on Oct 5, 2026.]
+#move(dy: 1.5pt)[#h(1fr); Updated on Oct 12, 2026.]
 
 #link("mailto:liwy3@uci.edu")[liwy3\@uci.edu]
 #sym.bullet
@@ -100,14 +100,14 @@ and
 #let renno = [
 *#link("https://github.com/winstonyli/renno")[renno]* #sym.bullet _Rust_ #h(1fr) Sep 2026 -- Present
 - Built a scripting language on a *CEK machine* with multi-shot *algebraic effect handlers*.
-- Added *gradual typing*, row-polymorphic effect checking, and refinement predicates; 400+ tests.
+- Added *gradual typing* with run-time checks, row-polymorphic effects, refinements, and length-indexed vectors; 400+ tests.
 ]
 
 #let cereal-detail = if is-phd [
-- Wrote a C99/GNU front end in C99: GCC-compatible preprocessor, macro lint, parser, checker.
-- Matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests; parallel `-E` is fuzzed for identical output.
+- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, language server.
+- Matches gcc-13 diagnostics on 3,908 of 3,910 runnable gcc.dg tests; parallel `-E` fuzzed for identical output.
 ] else [
-- Wrote a C99 compiler front end in C99 that matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests.
+- Wrote a C99 front end and language server; matches gcc-13 on 3,908 of 3,910 runnable gcc.dg tests.
 ]
 
 #let cereal = [
@@ -117,7 +117,7 @@ and
 
 #let manifold = [
 *manifold* #sym.bullet _Rust, wgpu, CEF, Servo_ #h(1fr) Sep 2026 -- Present
-- Built a browser running each tab in its own engine process (Blink via CEF/WebView2, Servo, WebKitGTK) over IPC, with in-place engine hot-swap.
+- Built an 80k-line browser running each tab in its own engine process (Blink via CEF/WebView2, Servo, WebKitGTK) over IPC, with in-place engine hot-swap.
 - Added crash recovery, journaled sessions, and a force-directed tab graph on *wgpu*.
 ]
 

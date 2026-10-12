@@ -45,7 +45,7 @@
     <Project
         title="cereal"
         status="Sep 2026 – present"
-        blurb="C99 compiler front end written in C99; matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests."
+        blurb="C99 compiler front end and language server written in C99; matches gcc-13 diagnostics on 3,908 of 3,910 runnable gcc.dg tests."
         href="https://github.com/winstonyli/cereal"
         fields={['PL']}
         tools={['C99']}
