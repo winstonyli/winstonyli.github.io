@@ -1,5 +1,5 @@
 #set page(margin: (x: 1cm, y: 1cm))
-#set par(justify: true)
+#set par(justify: true, spacing: 1em)
 #set text(size: 13pt)
 #show link: underline
 
@@ -133,8 +133,9 @@ and
 ]
 
 #let apps-web = [
-*Apps & web* #sym.bullet _TypeScript_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.]
+*Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
+- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
+- *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
