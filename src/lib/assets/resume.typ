@@ -129,7 +129,7 @@ and
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 300+ tests on Bun, Node.
+- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 400+ tests on Bun, Node.
 - *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
 ]
 
