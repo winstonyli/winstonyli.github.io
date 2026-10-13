@@ -17,7 +17,7 @@
     v(-6pt)
     stack(
         dir: ltr,
-        spacing: 2em,
+        spacing: 1.2em,
         ..es.fields().children.filter(e => e != [ ]),
     )
 }
@@ -25,7 +25,7 @@
 
 #place(top)[= #smallcaps[Winston Li]]
 
-#move(dy: 1.5pt)[#h(1fr); Updated on Oct 12, 2026.]
+#move(dy: 1.5pt)[#h(1fr); Updated on Oct 13, 2026.]
 
 #link("mailto:liwy3@uci.edu")[liwy3\@uci.edu]
 #sym.bullet
@@ -56,10 +56,11 @@ and
     - Data Structures
     - Algorithms
     - Software Eng.
+    - Operating Systems
     - Compilers
-    - Cryptography
 ]
 #hlist[
+    - Cryptography
     - Formal Lang. & Automata
     - Quantum Computation
     - Distributed Systems
@@ -129,16 +130,21 @@ and
 - Measured DX12 at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
 ]
 
+#let plumb = [
+*plumb* #sym.bullet _Rust, Windows, NTFS_ #h(1fr) Oct 2026 -- Present
+- Built a disk-usage analyzer that reads the *NTFS MFT* to scan a 4.3M-node volume in under 10 s.
+- Added live updates from the NTFS change journal and a partial tree while scanning; 200+ tests.
+]
+
 #let apps-web = [
-*Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 400+ tests on Bun, Node. Evolved a bot that survives 3$times$ longer on held-out seeds to balance it.
-- *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
+*Apps & web* #sym.bullet _TypeScript_ #h(1fr) Sep 2026 -- Present
+- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 400+ tests on Bun, Node.
 ]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, tatic, cereal, apps-web)
+    (manifold, scratchtape, tatic, cereal, plumb, apps-web)
 }
 
 #for project in project-order [
@@ -157,8 +163,6 @@ and
 
 #if is-phd [
 *Research interests* $approx$ programming language design & theory.
-] else [
-*Domains:* compilers & PL, ML & GPU compute, browsers, web & desktop apps, developer tooling.
 ]
 
 #div[== Experience]

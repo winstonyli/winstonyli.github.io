@@ -1,6 +1,6 @@
 # Resume
 
-One Typst source, two variants. Last reviewed 2026-10-12.
+One Typst source, two variants. Last reviewed 2026-10-13.
 
 ## How it works
 
@@ -24,6 +24,8 @@ One Typst source, two variants. Last reviewed 2026-10-12.
 | manifold: 80k-line                                                                                   | `git ls-files '*.rs'` line count                               | 80,768 lines, 7 crates, 2026-10-12. Private repo.                                                                                                                                                                                               |
 | arrow-game: 400+ tests                                                                               | `bun test`                                                     | 439 pass (run 2026-10-13 at v0.4.1; 437 on 2026-10-12). The arrow-game README no longer states a count (removed 2026-10-13), so run `bun test` there.                                                                                           |
 | arrow-game: bot survives 3$times$ longer on held-out seeds                                           | `scripts/evolve-heldout.log`                                   | Baseline build, 30 unseen seeds: 177 s default vs 556 s evolved, 10 min cap (so the ratio is a floor). It is an evolution strategy over a steering bot, used for balance sweeps, not a game-AI claim. Rerun `scripts/evolve-bot.ts` to refresh. |
+| plumb: 4.3M-node volume scanned in under 10 s                                                        | plumb `docs/benchmarks.md`                                     | MFT scan 8.84 s + 0.76 s cold, run on a loaded machine; a rerun needs a quiet, elevated machine. Industry only. Private repo.                                                                                                                   |
+| plumb: 200+ tests                                                                                    | `#[test]` attributes                                           | 241 attributes on 2026-10-13, not run. Run `cargo test` before quoting a bigger number.                                                                                                                                                         |
 | tatic: "where possible" kernel-checked proof                                                         | tatic README                                                   | Do not drop the qualifier.                                                                                                                                                                                                                      |
 | tatic: fuzzed JIT vs interpreter, 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught | tatic README.md:793, :869-871                                  | "Zero mismatches found so far". Do not quote the 564/1000 "compile" figure with the ~99% one: different fuzzers. Industry says only "fuzz-tested it".                                                                                           |
 | tatic: independent checker replays the specialiser; translation validation                           | tatic README.md:14-23 (`spec_check.rs`), :295 (`decompile.rs`) | Compilable fragment is small (simply typed `Int -> ... -> Int` with closures); the README calls tatic a research prototype.                                                                                                                     |
@@ -31,12 +33,13 @@ One Typst source, two variants. Last reviewed 2026-10-12.
 ## Public and private
 
 - Public (linked from the resume and `/projects`): tatic, scratchtape, renno, cereal, arrow-game.
-- Private by decision, never link: manifold, lollipoppy, Lambast. The resume names them without links; `/projects` marks manifold and lollipoppy "private for now".
+- Private by decision, never link: manifold, lollipoppy, Lambast, plumb. The resume names them without links; `/projects` marks manifold and lollipoppy "private for now".
 - Public history must contain only the noreply address (`92236815+winstonyli@users.noreply.github.com`), and no local paths (`C:\Users`). Audit before making any repo public or pushing a large batch.
 
 ## Open items
 
 - arrow-game's 30 new commits (danger rings, evolved steering bot, balance work) were pushed and deployed 2026-10-13 (v0.4.1). Its Pages deploy runs only on `v*` tags or manual dispatch; the v0.3.1 and v0.4.0 tag runs failed on the `github-pages` environment protection rule, v0.4.1 succeeded.
 - Considered and parked (2026-10-12): tatic rule-mining results (`docs/loop-result.md`: seeded libraries need 2-5x fewer machine proofs than cold, 15 of 15 streams, but single runs, one theory, count of proofs not time; a Research-only line at most) and a tatic test count (about 520 `#[test]`, ~130 of them research experiments in `tests/church_bv`, includes uncommitted spikes); scratchtape kNN/IVF speedups (single unrepeated runs) and the CPU-vs-GPU training time (4.5 h CPU figure may be extrapolated); manifold per-frame and stuck-engine numbers (measured on a loaded machine).
+- Decisions 2026-10-13: Industry gained plumb and Apps & web shrank to one arrow-game line (lollipoppy and the evolved-bot sentence dropped from the resume; the bot stays on `/projects`); the Industry "Domains" line was cut for space; "Operating Systems" joined the course list and `hlist` spacing went from 2em to 1.2em so two course lines fit. tatic rule-mining bullet (Research) is still undecided: it costs a line, so it would replace the "independent checker" bullet.
 - cereal is fully pushed as of 2026-10-12.
 - Pages is built from `main` by GitHub Actions; confirm `/resume/` and the PDFs after any change.
