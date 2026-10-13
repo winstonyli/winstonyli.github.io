@@ -54,7 +54,7 @@
     <Project
         title="arrow-game"
         status="Sep 2026 – present; playable demo"
-        blurb="Browser archer roguelite in strict TypeScript with no runtime dependencies."
+        blurb="Browser archer roguelite in strict TypeScript with no runtime dependencies, balanced with a bot tuned by evolution search."
         href="https://winstonyli.github.io/arrow-game/"
         fields={['Game', 'Web']}
         tools={['TypeScript', 'Vite']}
