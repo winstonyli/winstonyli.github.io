@@ -83,8 +83,8 @@ and
 
 #let tatic-detail = if is-phd [
 - Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
-- Checks compiled code against an interpreter and, where possible, a *kernel-checked proof*.
-- An independent checker replays the specializer; translation validation rebuilds each term from the IR.
+- Checked compiled code against an interpreter and, where possible, a *kernel-checked proof*.
+- Added an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
 ] else [
 - Built a *JIT* caching *WebAssembly* by content hash; installs code only after checking it against an interpreter and, where possible, a *machine-checked proof*.
@@ -103,10 +103,10 @@ and
 ]
 
 #let cereal-detail = if is-phd [
-- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, language server.
-- Matches gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; parallel `-E` fuzzed for same output.
+- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, *language server*.
+- Matched gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; fuzzed parallel `-E` for same output.
 ] else [
-- Wrote a C99 front end and language server; matches gcc-13 on 3,908 of 3,910 runnable gcc.dg tests.
+- Wrote a C99 front end and *language server*; matched gcc-13 on 3,908 of 3,910 runnable gcc.dg tests.
 ]
 
 #let cereal = [
@@ -123,7 +123,7 @@ and
 #let scratchtape = [
 *#link("https://github.com/winstonyli/scratchtape")[scratchtape]* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
 - Built an ML engine from scratch (autodiff, layers, GPU backend); every primitive is gradient-checked.
-- Measured DX12 at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
+- Measured *DX12* at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
 ]
 
 #let plumb = [
