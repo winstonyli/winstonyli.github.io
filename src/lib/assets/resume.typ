@@ -141,7 +141,7 @@ and
 #let compilers = [
 *Compilers* #sym.bullet _Rust_ #h(1fr) Feb 2025 -- Jun 2026
 - *Lambast* (Honors): optimizing compiler for untyped #(sym.lambda)-calculus; UROP Symposium talk.
-- *tiny* (CS 142B): SSA compiler using Braun et al.’s *marker algorithm*, with CSE and phi cleanup.
+- *CS 142B project*: SSA compiler via Braun et al.’s *marker algorithm*; CSE, phi simplification.
 ]
 
 #let project-order = if is-phd {
