@@ -1,6 +1,12 @@
 <script lang="ts">
     import { onDestroy, onMount } from 'svelte';
-    import { tsParticles, type Container } from '@tsparticles/engine';
+    import {
+        hslToRgb,
+        rgbToHsl,
+        tsParticles,
+        type Container,
+        type IRgb,
+    } from '@tsparticles/engine';
     import { loadTrianglesPreset } from '@tsparticles/preset-triangles';
     import { DARK_THEME } from '$lib/theme';
 
@@ -8,6 +14,7 @@
     let container: Container | undefined;
     let themeObserver: MutationObserver | undefined;
     let loadToken = 0;
+    let lightness = { min: 0, max: 0 };
 
     function hslRangeForTheme(isDark: boolean) {
         return {
@@ -17,9 +24,36 @@
         };
     }
 
+    // Theme changes only move lightness, so remap live particles into the new
+    // range instead of resetting (which respawns the whole field).
+    function recolor(isDark: boolean) {
+        const from = lightness;
+        const to = hslRangeForTheme(isDark).l;
+        const remap = (l: number) =>
+            to.min +
+            ((l - from.min) / (from.max - from.min)) * (to.max - to.min);
+        for (const p of container!.particles.filter(() => true)) {
+            if (p.fillColor) p.fillColor.l.value = remap(p.fillColor.l.value);
+        }
+        // All links share one color, cached as RGB when first drawn.
+        // (added by the links plugin, so not in the engine's types)
+        const manager = container!.particles as unknown as {
+            linksColor?: IRgb | string;
+        };
+        if (typeof manager.linksColor === 'object') {
+            const hsl = rgbToHsl(manager.linksColor);
+            manager.linksColor = hslToRgb({ ...hsl, l: remap(hsl.l) });
+        }
+        lightness = to;
+    }
+
     async function loadParticles() {
         const token = ++loadToken;
         const isDark = document.documentElement.dataset.theme === DARK_THEME;
+        if (container) {
+            recolor(isDark);
+            return;
+        }
         const isMobile = window.matchMedia('(max-width: 640px)').matches;
         const reducedMotion = window.matchMedia(
             '(prefers-reduced-motion: reduce)',
@@ -36,30 +70,26 @@
                     density: { enable: true },
                 },
                 paint: {
-                    fill: { color: { value: color }, opacity: 0.1 },
+                    fill: { color: { value: color }, opacity: 0.16 },
                 },
 
                 effect: { type: 'shadow' },
                 move: { enable: !reducedMotion, speed: 0.2 },
                 links: {
                     color: { value: color },
-                    opacity: 0.2,
-                    triangles: { opacity: 0.01 },
+                    opacity: 0.35,
+                    triangles: { opacity: 0.03 },
                 },
             },
         };
 
-        if (container) {
-            await container.reset(options);
-            return;
-        }
-
         const loaded = await tsParticles.load({ element: particles, options });
         if (token !== loadToken) {
-            loaded.destroy();
+            loaded?.destroy();
             return;
         }
         container = loaded;
+        lightness = color.l;
     }
 
     onMount(async () => {
