@@ -69,6 +69,14 @@
     />
 
     <Project
+        title="plumb"
+        status="Oct 2026 – present; private for now"
+        blurb="Windows disk-usage analyzer that reads the NTFS master file table, with live updates from the change journal."
+        fields={['Systems']}
+        tools={['Rust']}
+    />
+
+    <Project
         title="lollipoppy"
         status="Sep 2026 – present; private for now"
         blurb="League of Legends companion desktop app for builds, notes, and champ select."
