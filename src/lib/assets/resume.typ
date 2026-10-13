@@ -114,12 +114,14 @@ and
 ]
 
 #let compilers = [
-*Compilers* #sym.bullet _Rust, C99, WebAssembly_ #h(1fr) Feb 2025 -- Present
+*Languages & compilers* #sym.bullet _Rust, C99, WebAssembly_ #h(1fr) Feb 2023 -- Present
 - *#link("https://github.com/winstonyli/tatic")[tatic]*: *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model; the rest stays interpreted.
 - Fuzzing and benchmarks caught a checker overflow and a memory leak; no mismatches in \~12k trials.
 - *#link("https://github.com/winstonyli/cereal")[cereal]*: C99 front end and *language server*; matched gcc-13 on 3,908/3,910 runnable gcc.dg tests.
 - *Lambast* (Honors): optimizing untyped #(sym.lambda)-calculus compiler with *closure conversion*; UROP talk.
 - *CS 142B project*: SSA compiler via Braun et al.’s *marker algorithm*; CSE, phi simplification.
+- *#link("https://github.com/winstonyli/renno")[renno]*: CEK-machine language with *algebraic effects* and gradual typing; 400+ tests.
+- *#link("https://github.com/winstonyli/renno-legacy")[renno (prototype)]* (2023): Rust compiler to JavaScript with name resolution and a type checker.
 ]
 
 #let project-order = if is-phd {
