@@ -86,6 +86,7 @@ and
 - Checked compiled code against an interpreter and, where possible, a *kernel-checked proof*.
 - Added an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
+- Mined rewrite rules from laws the prover couldn't close; seeded libraries needed 2--3$times$ fewer machine proofs (one theory).
 ] else [
 - Built a *JIT* caching *WebAssembly* by content hash; installs code only after checking it against an interpreter and, where possible, a *machine-checked proof*.
 - Fuzzing and benchmarks caught a checker overflow and a cache leak; no mismatches in 12,000 trials.
