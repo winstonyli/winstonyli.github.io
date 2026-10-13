@@ -1,5 +1,5 @@
 #set page(margin: (x: 1cm, y: 1cm))
-#set par(justify: true, spacing: 1em)
+#set par(justify: true, spacing: 0.9em)
 #set text(size: 13pt)
 #show link: underline
 
@@ -136,13 +136,18 @@ and
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
 - *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
-- *lollipoppy*: Tauri + Svelte League companion: applies runes and items via the client API; champ-select overlay.
+]
+
+#let compilers = [
+*Compilers* #sym.bullet _Rust_ #h(1fr) Feb 2025 -- Jun 2026
+- *Lambast* (Honors): optimizing compiler for untyped #(sym.lambda)-calculus; UROP Symposium talk.
+- *tiny* (CS 142B): SSA compiler using Braun et al.’s *marker algorithm*, with CSE and phi cleanup.
 ]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, tatic, cereal, plumb, apps-web)
+    (manifold, scratchtape, tatic, cereal, plumb, apps-web, compilers)
 }
 
 #for project in project-order [
