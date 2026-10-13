@@ -108,9 +108,9 @@ and
 - Added live updates from the NTFS change journal and a partial tree while scanning; 200+ tests.
 ]
 
-#let apps-web = [
-*Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
+#let arrow-game = [
+*#link("https://github.com/winstonyli/arrow-game")[arrow-game]* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
+- Built a strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
 ]
 
 #let compilers = [
@@ -127,7 +127,7 @@ and
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, compilers, plumb, apps-web)
+    (manifold, scratchtape, compilers, plumb, arrow-game)
 }
 
 #for project in project-order [
