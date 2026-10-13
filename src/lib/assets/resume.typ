@@ -86,7 +86,7 @@ and
 - Gated installation on agreement with an interpreter and a *kernel-checked proof* of the compiler model; unprovable terms stay interpreted.
 - Added an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
-- Mined rewrite rules from laws the prover couldn't close; seeded libraries needed 2--3$times$ fewer machine proofs (one theory).
+- Mined rewrite rules from laws the prover couldn't close; seeded libraries needed 3--5$times$ fewer machine proofs (one theory).
 ] else [
 - Built a *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model; the rest stays interpreted.
 - Fuzzing and benchmarks caught a checker overflow and a memory leak; no mismatches in \~12k trials.
@@ -117,7 +117,7 @@ and
 
 #let manifold = [
 *manifold* #sym.bullet _Rust, wgpu, CEF, Servo_ #h(1fr) Sep 2026 -- Present
-- Built an 80k-line browser: an engine process per tab (Blink, Servo, WebKit) over IPC, with hot-swap.
+- Built an 85k-line browser: an engine process per tab (Blink, Servo, WebKit) over IPC, with hot-swap.
 - Added crash recovery, journaled sessions, and a force-directed tab graph on *wgpu*.
 ]
 
@@ -136,7 +136,8 @@ and
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
 - *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
-- *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.]
+- *lollipoppy*: Tauri + Svelte League companion: applies runes and items via the client API; champ-select overlay.
+]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)

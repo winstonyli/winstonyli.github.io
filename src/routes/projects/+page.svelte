@@ -18,7 +18,7 @@
     <Project
         title="tatic"
         status="Mar 2026 – present"
-        blurb="JIT for a higher-order language: caches compiled WebAssembly by content hash and checks it against an interpreter and, where possible, a kernel-checked proof."
+        blurb="JIT for a higher-order language: caches compiled WebAssembly by content hash and installs it only if it matches an interpreter and has a kernel-checked proof."
         href="https://github.com/winstonyli/tatic"
         fields={['PL']}
         tools={['Rust', 'WebAssembly']}
