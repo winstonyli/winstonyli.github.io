@@ -38,11 +38,6 @@ winstonyli on
 and
 #link("https://www.linkedin.com/in/winstonyli")[LinkedIn]
 
-#if not is-phd [
-    _Builds systems from scratch across PL, ML, and the web._
-]
-
-
 
 #div[== Education]
 
@@ -92,7 +87,8 @@ and
 - An independent checker replays the specialiser; translation validation rebuilds each term from the IR.
 - Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
 ] else [
-- Built a *JIT* caching *WebAssembly* by content hash; fuzz-tested it and fixed a benchmark-found leak.
+- Built a *JIT* caching *WebAssembly* by content hash; installs code only after checking it against an interpreter and, where possible, a *kernel-checked proof*.
+- Fuzzing and benchmarks caught a kernel overflow and a cache leak; no mismatches in 12,000 trials.
 ]
 
 #let tatic = [
@@ -138,8 +134,7 @@ and
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 400+ tests on Bun, Node.
-]
+- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
