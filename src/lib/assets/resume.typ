@@ -88,8 +88,10 @@ and
 #let tatic-detail = if is-phd [
 - Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
 - Checks compiled code against an interpreter and, where possible, a *kernel-checked proof*.
+- An independent checker replays the specialiser; translation validation rebuilds each term from the IR.
+- Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
 ] else [
-- Built a *JIT* caching compiled *WebAssembly* by content hash; fixed a leak found by benchmark.
+- Built a *JIT* caching *WebAssembly* by content hash; fuzz-tested it and fixed a benchmark-found leak.
 ]
 
 #let tatic = [
@@ -100,12 +102,12 @@ and
 #let renno = [
 *#link("https://github.com/winstonyli/renno")[renno]* #sym.bullet _Rust_ #h(1fr) Sep 2026 -- Present
 - Built a scripting language on a *CEK machine* with multi-shot *algebraic effect handlers*.
-- Added *gradual typing* with run-time checks, row-polymorphic effects, refinements, and length-indexed vectors; 400+ tests.
+- Added *gradual typing*, run-time checks, effect rows, refinements, length-indexed vectors; 400+ tests.
 ]
 
 #let cereal-detail = if is-phd [
 - Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, language server.
-- Matches gcc-13 diagnostics on 3,908 of 3,910 runnable gcc.dg tests; parallel `-E` fuzzed for identical output.
+- Matches gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; parallel `-E` fuzzed for same output.
 ] else [
 - Wrote a C99 front end and language server; matches gcc-13 on 3,908 of 3,910 runnable gcc.dg tests.
 ]
