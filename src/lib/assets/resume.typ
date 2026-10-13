@@ -83,13 +83,13 @@ and
 
 #let tatic-detail = if is-phd [
 - Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
-- Checked compiled code against an interpreter and, where possible, a *kernel-checked proof*.
+- Gated installation on agreement with an interpreter and a *kernel-checked proof* of the compiler model; unprovable terms stay interpreted.
 - Added an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
 - Mined rewrite rules from laws the prover couldn't close; seeded libraries needed 2--3$times$ fewer machine proofs (one theory).
 ] else [
-- Built a *JIT* caching *WebAssembly* by content hash; installs code only after checking it against an interpreter and, where possible, a *machine-checked proof*.
-- Fuzzing and benchmarks caught a checker overflow and a cache leak; no mismatches in 12,000 trials.
+- Built a *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model; the rest stays interpreted.
+- Fuzzing and benchmarks caught a checker overflow and a memory leak; no mismatches in \~12k trials.
 ]
 
 #let tatic = [
