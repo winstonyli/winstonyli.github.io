@@ -1,5 +1,5 @@
 #set page(margin: (x: 1cm, y: 1cm))
-#set par(justify: true, spacing: 0.9em)
+#set par(justify: true, spacing: 1em)
 #set text(size: 13pt)
 #show link: underline
 
@@ -63,38 +63,19 @@ and
 
 #div[== Projects]
 
-#let lambast-subtitle = if is-phd [
-    Honors research project using Rust
-] else [
-    Rust compiler project
-]
-
-#let lambast-detail = if is-phd [
-- Generated randomized benchmark terms via Grygiel & Lescanne's binary lambda-term enumeration; presented at the *UCI UROP Symposium*.
-] else [
-- Presented research at the UCI UROP Symposium.
-]
-
 #let lambast = [
-*Lambast* #sym.bullet _#(lambast-subtitle)_ #h(1fr) Feb 2025 -- Jun 2026
+*Lambast* #sym.bullet _Honors research project using Rust_ #h(1fr) Feb 2025 -- Jun 2026
 - Built a whole-program optimizing compiler for untyped #(sym.lambda)-calculus using *closure conversion* and *De Bruijn indices*.
-#lambast-detail
+- Generated randomized benchmark terms via Grygiel & Lescanne's binary lambda-term enumeration; presented at the *UCI UROP Symposium*.
 ]
 
-#let tatic-detail = if is-phd [
+#let tatic = [
+*#link("https://github.com/winstonyli/tatic")[tatic]* #sym.bullet _Rust, WebAssembly, dependent type theory_ #h(1fr) Mar 2026 -- Present
 - Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
 - Gated installation on agreement with an interpreter and a *kernel-checked proof* of the compiler model; unprovable terms stay interpreted.
 - Added an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
 - Mined rewrite rules from laws the prover couldn't close; seeded libraries needed 3--5$times$ fewer machine proofs (one theory).
-] else [
-- Built a *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model; the rest stays interpreted.
-- Fuzzing and benchmarks caught a checker overflow and a memory leak; no mismatches in \~12k trials.
-]
-
-#let tatic = [
-*#link("https://github.com/winstonyli/tatic")[tatic]* #sym.bullet _#(if is-phd [Rust, WebAssembly, dependent type theory] else [Rust, WebAssembly])_ #h(1fr) Mar 2026 -- Present
-#tatic-detail
 ]
 
 #let renno = [
@@ -103,16 +84,10 @@ and
 - Added *gradual typing*, run-time checks, effect rows, refinements, length-indexed vectors; 400+ tests.
 ]
 
-#let cereal-detail = if is-phd [
-- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, *language server*.
-- Matched gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; fuzzed parallel `-E` for same output.
-] else [
-- Wrote a C99 front end and *language server*; matched gcc-13 on 3,908 of 3,910 runnable gcc.dg tests.
-]
-
 #let cereal = [
 *#link("https://github.com/winstonyli/cereal")[cereal]* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
-#cereal-detail
+- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, *language server*.
+- Matched gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; fuzzed parallel `-E` for same output.
 ]
 
 #let manifold = [
@@ -139,15 +114,18 @@ and
 ]
 
 #let compilers = [
-*Compilers* #sym.bullet _Rust_ #h(1fr) Feb 2025 -- Jun 2026
-- *Lambast* (Honors): optimizing #(sym.lambda)-calculus compiler with *closure conversion*; UROP talk.
+*Compilers* #sym.bullet _Rust, C99, WebAssembly_ #h(1fr) Feb 2025 -- Present
+- *#link("https://github.com/winstonyli/tatic")[tatic]*: *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model; the rest stays interpreted.
+- Fuzzing and benchmarks caught a checker overflow and a memory leak; no mismatches in \~12k trials.
+- *#link("https://github.com/winstonyli/cereal")[cereal]*: C99 front end and *language server*; matched gcc-13 on 3,908/3,910 runnable gcc.dg tests.
+- *Lambast* (Honors): optimizing untyped #(sym.lambda)-calculus compiler with *closure conversion*; UROP talk.
 - *CS 142B project*: SSA compiler via Braun et al.’s *marker algorithm*; CSE, phi simplification.
 ]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, tatic, cereal, plumb, apps-web, compilers)
+    (manifold, scratchtape, compilers, plumb, apps-web)
 }
 
 #for project in project-order [
