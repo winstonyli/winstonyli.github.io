@@ -117,7 +117,7 @@ and
 
 #let manifold = [
 *manifold* #sym.bullet _Rust, wgpu, CEF, Servo_ #h(1fr) Sep 2026 -- Present
-- Built an 80k-line browser running each tab in its own engine process (Blink via CEF/WebView2, Servo, WebKitGTK) over IPC, with in-place engine hot-swap.
+- Built an 80k-line browser: an engine process per tab (Blink, Servo, WebKit) over IPC, with hot-swap.
 - Added crash recovery, journaled sessions, and a force-directed tab graph on *wgpu*.
 ]
 
@@ -129,7 +129,7 @@ and
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 400+ tests on Bun, Node.
+- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 400+ tests on Bun, Node. Evolved a bot that survives 3$times$ longer on held-out seeds to balance it.
 - *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
 ]
 
