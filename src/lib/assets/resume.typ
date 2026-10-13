@@ -1,5 +1,5 @@
 #set page(margin: (x: 1cm, y: 1cm))
-#set par(justify: true)
+#set par(justify: true, spacing: 1em)
 #set text(size: 13pt)
 #show link: underline
 
@@ -17,7 +17,7 @@
     v(-6pt)
     stack(
         dir: ltr,
-        spacing: 2em,
+        spacing: 1.2em,
         ..es.fields().children.filter(e => e != [ ]),
     )
 }
@@ -25,7 +25,7 @@
 
 #place(top)[= #smallcaps[Winston Li]]
 
-#move(dy: 1.5pt)[#h(1fr); Updated on Oct 5, 2026.]
+#move(dy: 1.5pt)[#h(1fr); Updated on Oct 13, 2026.]
 
 #link("mailto:liwy3@uci.edu")[liwy3\@uci.edu]
 #sym.bullet
@@ -37,11 +37,6 @@ winstonyli on
 #link("https://github.com/winstonyli")[GitHub]
 and
 #link("https://www.linkedin.com/in/winstonyli")[LinkedIn]
-
-#if not is-phd [
-    _Builds systems from scratch across PL, ML, and the web._
-]
-
 
 
 #div[== Education]
@@ -56,10 +51,11 @@ and
     - Data Structures
     - Algorithms
     - Software Eng.
+    - Operating Systems
     - Compilers
-    - Cryptography
 ]
 #hlist[
+    - Cryptography
     - Formal Lang. & Automata
     - Quantum Computation
     - Distributed Systems
@@ -87,9 +83,13 @@ and
 
 #let tatic-detail = if is-phd [
 - Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
-- Checks compiled code against an interpreter and, where possible, a *kernel-checked proof*.
+- Gated installation on agreement with an interpreter and a *kernel-checked proof* of the compiler model; unprovable terms stay interpreted.
+- Added an independent checker replaying the specializer, and translation validation from the IR.
+- Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
+- Mined rewrite rules from laws the prover couldn't close; seeded libraries needed 3--5$times$ fewer machine proofs (one theory).
 ] else [
-- Built a *JIT* caching compiled *WebAssembly* by content hash; fixed a leak found by benchmark.
+- Built a *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model; the rest stays interpreted.
+- Fuzzing and benchmarks caught a checker overflow and a memory leak; no mismatches in \~12k trials.
 ]
 
 #let tatic = [
@@ -100,14 +100,14 @@ and
 #let renno = [
 *#link("https://github.com/winstonyli/renno")[renno]* #sym.bullet _Rust_ #h(1fr) Sep 2026 -- Present
 - Built a scripting language on a *CEK machine* with multi-shot *algebraic effect handlers*.
-- Added *gradual typing*, row-polymorphic effect checking, and refinement predicates; 400+ tests.
+- Added *gradual typing*, run-time checks, effect rows, refinements, length-indexed vectors; 400+ tests.
 ]
 
 #let cereal-detail = if is-phd [
-- Wrote a C99/GNU front end in C99: GCC-compatible preprocessor, macro lint, parser, checker.
-- Matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests; parallel `-E` is fuzzed for identical output.
+- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, *language server*.
+- Matched gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; fuzzed parallel `-E` for same output.
 ] else [
-- Wrote a C99 compiler front end in C99 that matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests.
+- Wrote a C99 front end and *language server*; matched gcc-13 on 3,908 of 3,910 runnable gcc.dg tests.
 ]
 
 #let cereal = [
@@ -117,26 +117,32 @@ and
 
 #let manifold = [
 *manifold* #sym.bullet _Rust, wgpu, CEF, Servo_ #h(1fr) Sep 2026 -- Present
-- Built a browser running each tab in its own engine process (Blink via CEF/WebView2, Servo, WebKitGTK) over IPC, with in-place engine hot-swap.
+- Built an 85k-line browser: an engine process per tab (Blink, Servo, WebKit) over IPC, with hot-swap.
 - Added crash recovery, journaled sessions, and a force-directed tab graph on *wgpu*.
 ]
 
 #let scratchtape = [
 *#link("https://github.com/winstonyli/scratchtape")[scratchtape]* #sym.bullet _Rust, wgpu, cubecl_ #h(1fr) Sep 2026 -- Present
 - Built an ML engine from scratch (autodiff, layers, GPU backend); every primitive is gradient-checked.
-- Measured DX12 at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
+- Measured *DX12* at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
+]
+
+#let plumb = [
+*plumb* #sym.bullet _Rust, Windows, NTFS_ #h(1fr) Oct 2026 -- Present
+- Built a disk-usage analyzer that reads the *NTFS MFT* to scan a 4.3M-node volume in under 10 s.
+- Added live updates from the NTFS change journal and a partial tree while scanning; 200+ tests.
 ]
 
 #let apps-web = [
 *Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS browser roguelite, no runtime dependencies; 300+ tests on Bun, Node.
-- *lollipoppy*: Tauri (Rust) + Svelte desktop app that drives the League client.
+- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
+- *lollipoppy*: Tauri + Svelte League companion: applies runes and items via the client API; champ-select overlay.
 ]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, tatic, cereal, apps-web)
+    (manifold, scratchtape, tatic, cereal, plumb, apps-web)
 }
 
 #for project in project-order [
@@ -155,8 +161,6 @@ and
 
 #if is-phd [
 *Research interests* $approx$ programming language design & theory.
-] else [
-*Domains:* compilers & PL, ML & GPU compute, browsers, web & desktop apps, developer tooling.
 ]
 
 #div[== Experience]

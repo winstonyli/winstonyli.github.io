@@ -18,7 +18,7 @@
     <Project
         title="tatic"
         status="Mar 2026 – present"
-        blurb="JIT for a higher-order language: caches compiled WebAssembly by content hash and checks it against an interpreter and, where possible, a kernel-checked proof."
+        blurb="JIT for a higher-order language: caches compiled WebAssembly by content hash and installs it only if it matches an interpreter and has a kernel-checked proof."
         href="https://github.com/winstonyli/tatic"
         fields={['PL']}
         tools={['Rust', 'WebAssembly']}
@@ -45,7 +45,7 @@
     <Project
         title="cereal"
         status="Sep 2026 – present"
-        blurb="C99 compiler front end written in C99; matches gcc-13 diagnostics on 96% of 3,700+ gcc.dg tests."
+        blurb="C99 compiler front end and language server written in C99; matches gcc-13 diagnostics on 3,908 of 3,910 runnable gcc.dg tests."
         href="https://github.com/winstonyli/cereal"
         fields={['PL']}
         tools={['C99']}
@@ -54,7 +54,7 @@
     <Project
         title="arrow-game"
         status="Sep 2026 – present; playable demo"
-        blurb="Browser archer roguelite in strict TypeScript with no runtime dependencies."
+        blurb="Browser archer roguelite in strict TypeScript with no runtime dependencies, balanced with a bot tuned by evolution search."
         href="https://winstonyli.github.io/arrow-game/"
         fields={['Game', 'Web']}
         tools={['TypeScript', 'Vite']}
@@ -66,6 +66,14 @@
         blurb="Browser where each tab runs in its own engine process (Blink, Servo, or WebKitGTK), with in-place engine hot-swap."
         fields={['Web', 'GPU']}
         tools={['Rust', 'wgpu']}
+    />
+
+    <Project
+        title="plumb"
+        status="Oct 2026 – present; private for now"
+        blurb="Windows disk-usage analyzer that reads the NTFS master file table, with live updates from the change journal."
+        fields={['Systems']}
+        tools={['Rust']}
     />
 
     <Project
