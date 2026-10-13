@@ -22,7 +22,7 @@ One Typst source, two variants. Last reviewed 2026-10-12.
 | cereal: language server                                      | cereal STATUS.md:39-43, B4_DESIGN.md | Partial: workspace/symbol covers open units only, no cross-file references or workspace index (B5), rename edits one file. Checked against clangd on 6 files. Do not claim self-hosting.                                                  |
 | renno: 400+ tests                                            | `cargo test`                         | 422 passed on 2026-10-04; 610 `#[test]` attributes on 2026-10-12 (not run). Run `cargo test` before quoting a bigger number.                                                                                                              |
 | manifold: 80k-line                                           | `git ls-files '*.rs'` line count     | 80,768 lines, 7 crates, 2026-10-12. Private repo.                                                                                                                                                                                         |
-| arrow-game: 400+ tests                                       | `bun test`                           | 437 pass (run 2026-10-12, pushed). The arrow-game README still says 426, so it is stale low.                                                                                                                                              |
+| arrow-game: 400+ tests                                       | `bun test`                           | 439 pass (run 2026-10-13 at v0.4.1; 437 on 2026-10-12). The arrow-game README still says 426, so it is stale low.                                                                                                                         |
 | tatic: "where possible" kernel-checked proof                 | tatic README                         | Do not drop the qualifier.                                                                                                                                                                                                                |
 
 ## Public and private
@@ -33,7 +33,7 @@ One Typst source, two variants. Last reviewed 2026-10-12.
 
 ## Open items
 
-- arrow-game's 30 new commits (danger rings, evolved steering bot, balance work) were pushed 2026-10-12. Its Pages deploy only runs on `v*` tags or manual dispatch, and tag runs fail on the `github-pages` environment protection rule, so the live demo is still the 2026-10-05 build until someone runs `gh workflow run pages.yml --ref main`. Consider an evolved-bot resume bullet.
+- arrow-game's 30 new commits (danger rings, evolved steering bot, balance work) were pushed and deployed 2026-10-13 (v0.4.1). Its Pages deploy runs only on `v*` tags or manual dispatch; the v0.3.1 and v0.4.0 tag runs failed on the `github-pages` environment protection rule, v0.4.1 succeeded. Consider an evolved-bot resume bullet.
 - Considered and parked (2026-10-12): tatic rule-mining results (single runs, one theory, mixed; Research-only line at most); scratchtape kNN/IVF speedups (single unrepeated runs) and the CPU-vs-GPU training time (4.5 h CPU figure may be extrapolated); manifold per-frame and stuck-engine numbers (measured on a loaded machine).
 - cereal is fully pushed as of 2026-10-12.
 - Pages is built from `main` by GitHub Actions; confirm `/resume/` and the PDFs after any change.
