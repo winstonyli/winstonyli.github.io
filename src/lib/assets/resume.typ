@@ -140,7 +140,7 @@ and
 
 #let compilers = [
 *Compilers* #sym.bullet _Rust_ #h(1fr) Feb 2025 -- Jun 2026
-- *Lambast* (Honors): optimizing compiler for untyped #(sym.lambda)-calculus; UROP Symposium talk.
+- *Lambast* (Honors): optimizing #(sym.lambda)-calculus compiler with *closure conversion*; UROP talk.
 - *CS 142B project*: SSA compiler via Braun et al.’s *marker algorithm*; CSE, phi simplification.
 ]
 
