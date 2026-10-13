@@ -146,10 +146,11 @@
     />
 
     <Project
-        title="Renno (2023)"
+        title="renno (prototype)"
         status="completed in Spring '23"
         blurb="Baby's first language (with static analysis and multi-stage lowering)."
         src={rennoSrc}
+        href="https://github.com/winstonyli/renno-legacy"
         fields={['PL']}
         tools={['Rust', 'Svelte', 'TypeScript']}
     />

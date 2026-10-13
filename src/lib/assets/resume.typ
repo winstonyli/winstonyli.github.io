@@ -63,38 +63,19 @@ and
 
 #div[== Projects]
 
-#let lambast-subtitle = if is-phd [
-    Honors research project using Rust
-] else [
-    Rust compiler project
-]
-
-#let lambast-detail = if is-phd [
-- Generated randomized benchmark terms via Grygiel & Lescanne's binary lambda-term enumeration; presented at the *UCI UROP Symposium*.
-] else [
-- Presented research at the UCI UROP Symposium.
-]
-
 #let lambast = [
-*Lambast* #sym.bullet _#(lambast-subtitle)_ #h(1fr) Feb 2025 -- Jun 2026
+*Lambast* #sym.bullet _Honors research project using Rust_ #h(1fr) Feb 2025 -- Jun 2026
 - Built a whole-program optimizing compiler for untyped #(sym.lambda)-calculus using *closure conversion* and *De Bruijn indices*.
-#lambast-detail
+- Generated randomized benchmark terms via Grygiel & Lescanne's binary lambda-term enumeration; presented at the *UCI UROP Symposium*.
 ]
 
-#let tatic-detail = if is-phd [
+#let tatic = [
+*#link("https://github.com/winstonyli/tatic")[tatic]* #sym.bullet _Rust, WebAssembly, dependent type theory_ #h(1fr) Mar 2026 -- Present
 - Built a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
 - Gated installation on agreement with an interpreter and a *kernel-checked proof* of the compiler model; unprovable terms stay interpreted.
 - Added an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzed the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
 - Mined rewrite rules from laws the prover couldn't close; seeded libraries needed 3--5$times$ fewer machine proofs (one theory).
-] else [
-- Built a *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model; the rest stays interpreted.
-- Fuzzing and benchmarks caught a checker overflow and a memory leak; no mismatches in \~12k trials.
-]
-
-#let tatic = [
-*#link("https://github.com/winstonyli/tatic")[tatic]* #sym.bullet _#(if is-phd [Rust, WebAssembly, dependent type theory] else [Rust, WebAssembly])_ #h(1fr) Mar 2026 -- Present
-#tatic-detail
 ]
 
 #let renno = [
@@ -103,16 +84,10 @@ and
 - Added *gradual typing*, run-time checks, effect rows, refinements, length-indexed vectors; 400+ tests.
 ]
 
-#let cereal-detail = if is-phd [
-- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, *language server*.
-- Matched gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; fuzzed parallel `-E` for same output.
-] else [
-- Wrote a C99 front end and *language server*; matched gcc-13 on 3,908 of 3,910 runnable gcc.dg tests.
-]
-
 #let cereal = [
 *#link("https://github.com/winstonyli/cereal")[cereal]* #sym.bullet _C99_ #h(1fr) Sep 2026 -- Present
-#cereal-detail
+- Wrote a C99/GNU front end in C99: preprocessor, macro lint, parser, checker, *language server*.
+- Matched gcc-13 diagnostics on 3,908/3,910 runnable gcc.dg tests; fuzzed parallel `-E` for same output.
 ]
 
 #let manifold = [
@@ -133,16 +108,26 @@ and
 - Added live updates from the NTFS change journal and a partial tree while scanning; 200+ tests.
 ]
 
-#let apps-web = [
-*Apps & web* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
-- *#link("https://github.com/winstonyli/arrow-game")[arrow-game]*: strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
-- *lollipoppy*: Tauri + Svelte League companion: applies runes and items via the client API; champ-select overlay.
+#let arrow-game = [
+*#link("https://github.com/winstonyli/arrow-game")[arrow-game]* #sym.bullet _TypeScript, Svelte, Tauri_ #h(1fr) Sep 2026 -- Present
+- Built a strict-TS roguelite; 400+ tests; balanced with an evolved bot that lasts 3$times$ longer.
+]
+
+#let compilers = [
+*Languages & compilers* #sym.bullet _Rust, C99, WebAssembly_ #h(1fr) Feb 2023 -- Present
+- *#link("https://github.com/winstonyli/tatic")[tatic]* (2026): Built a *JIT* caching *WebAssembly* by content hash; installs code only if it matches an interpreter and has a *machine-checked proof* of the compiler model.
+  - Fuzzed it against the interpreter (\~12k trials, no mismatches); caught a checker overflow and a leak.
+- *#link("https://github.com/winstonyli/cereal")[cereal]* (2026): Wrote a C99 front end + *language server*; matched gcc-13 on 3,908/3,910 gcc.dg tests.
+- *#link("https://github.com/winstonyli/renno")[renno]* (2026): Built a CEK-machine language with *algebraic effects* and gradual typing; 400+ tests.
+- *Lambast* (Honors ’25): Wrote optimizing #(sym.lambda)-calculus compiler (*closure conversion*); UROP talk.
+- *CS 142B project* (2026): SSA compiler (Braun et al.’s *marker algorithm*); CSE, phi simplification.
+- *#link("https://github.com/winstonyli/renno-legacy")[renno (prototype)]* (2023): Wrote a Rust-to-JS compiler with name resolution and a type checker.
 ]
 
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, tatic, cereal, plumb, apps-web)
+    (manifold, scratchtape, compilers, plumb, arrow-game)
 }
 
 #for project in project-order [
