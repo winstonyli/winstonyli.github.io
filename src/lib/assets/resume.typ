@@ -120,7 +120,7 @@ and
 - *#link("https://github.com/winstonyli/cereal")[cereal]* (2026): Wrote a C99 front end + *language server*; matched gcc-13 on 3,908/3,910 gcc.dg tests.
 - *#link("https://github.com/winstonyli/renno")[renno]* (2026): Built a CEK-machine language with *algebraic effects* and gradual typing; 400+ tests.
 - *Lambast* (Honors ’25): Wrote optimizing #(sym.lambda)-calculus compiler (*closure conversion*); UROP talk.
-- *CS 142B project*: Built SSA compiler with Braun et al.’s *marker algorithm*, CSE, phi simplification.
+- *CS 142B project* (2026): SSA compiler (Braun et al.’s *marker algorithm*); CSE, phi simplification.
 - *#link("https://github.com/winstonyli/renno-legacy")[renno (prototype)]* (2023): Wrote a Rust-to-JS compiler with name resolution and a type checker.
 ]
 
