@@ -65,7 +65,7 @@ and
 
 #let lambast = [
 *Lambast* #sym.bullet _Honors research project using Rust_ #h(1fr) Feb 2025 -- Jun 2026
-- Developed a whole-program optimizing compiler for untyped #(sym.lambda)-calculus using *closure conversion* and *De Bruijn indices*.
+- Wrote a whole-program optimizing compiler for untyped #(sym.lambda)-calculus using *closure conversion* and *De Bruijn indices*.
 - Generated randomized benchmark terms via Grygiel & Lescanne's binary lambda-term enumeration; presented at the *UCI UROP Symposium*.
 ]
 
@@ -98,19 +98,19 @@ and
 
 #let scratchtape = [
 *#link("https://github.com/winstonyli/scratchtape")[scratchtape]* #sym.bullet _Rust, wgpu, cubecl_
-- Creating an ML engine from scratch (autodiff, layers, GPU); gradient-checking every primitive.
+- Developing an ML engine from scratch (autodiff, layers, GPU); gradient-checking each primitive.
 - Measuring *DX12* at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
 ]
 
 #let plumb = [
 *plumb* #sym.bullet _Rust, Windows, NTFS_
-- Developing a disk-usage analyzer reading the *NTFS MFT* to scan a 4.3M-node volume in under 10 s.
+- Writing a disk-usage analyzer that reads the *NTFS MFT* to scan a 4.3M-node volume in under 10 s.
 - Integrating live updates from the NTFS change journal and a partial tree while scanning; 200+ tests.
 ]
 
 #let arrow-game = [
 *#link("https://github.com/winstonyli/arrow-game")[arrow-game]* #sym.bullet _TypeScript, Svelte, Tauri_
-- Making a strict-TS roguelite; 400+ tests; balancing it with an evolved bot that lasts 3$times$ longer.
+- Crafting a strict-TS roguelite; 400+ tests; balancing it with an evolved bot that lasts 3$times$ longer.
 ]
 
 #let compilers = [
