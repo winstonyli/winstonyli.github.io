@@ -65,13 +65,13 @@ and
 
 #let lambast = [
 *Lambast* #sym.bullet _Honors research project using Rust_ #h(1fr) Feb 2025 -- Jun 2026
-- Built a whole-program optimizing compiler for untyped #(sym.lambda)-calculus using *closure conversion* and *De Bruijn indices*.
+- Developed a whole-program optimizing compiler for untyped #(sym.lambda)-calculus using *closure conversion* and *De Bruijn indices*.
 - Generated randomized benchmark terms via Grygiel & Lescanne's binary lambda-term enumeration; presented at the *UCI UROP Symposium*.
 ]
 
 #let tatic = [
 *#link("https://github.com/winstonyli/tatic")[tatic]* #sym.bullet _Rust, WebAssembly, dependent type theory_ #h(1fr) Mar 2026 -- Present
-- Building a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
+- Engineering a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
 - Gating installation on agreement with an interpreter and a *kernel-checked proof* of the compiler model; unprovable terms stay interpreted.
 - Writing an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzing the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
@@ -98,7 +98,7 @@ and
 
 #let scratchtape = [
 *#link("https://github.com/winstonyli/scratchtape")[scratchtape]* #sym.bullet _Rust, wgpu, cubecl_
-- Building an ML engine from scratch (autodiff, layers, GPU); gradient-checking every primitive.
+- Creating an ML engine from scratch (autodiff, layers, GPU); gradient-checking every primitive.
 - Measuring *DX12* at 1.6--5.8$times$ lower overhead than Vulkan on small matmuls; up to 900 GFLOP/s.
 ]
 
@@ -110,7 +110,7 @@ and
 
 #let arrow-game = [
 *#link("https://github.com/winstonyli/arrow-game")[arrow-game]* #sym.bullet _TypeScript, Svelte, Tauri_
-- Creating a strict-TS roguelite; 400+ tests; balancing it with an evolved bot that lasts 3$times$ longer.
+- Making a strict-TS roguelite; 400+ tests; balancing it with an evolved bot that lasts 3$times$ longer.
 ]
 
 #let compilers = [
@@ -121,7 +121,7 @@ and
 - *#link("https://github.com/winstonyli/renno")[renno]*: Designing a CEK-machine language with *algebraic effects* and gradual typing; 400+ tests.
 - *Lambast* (2025, Honors): Wrote optimizing #(sym.lambda)-calculus compiler (*closure conversion*); UROP talk.
 - *CS 142B project*: Built an SSA compiler (Braun et al.’s *marker algorithm*); CSE, phi simplification.
-- *#link("https://github.com/winstonyli/renno-legacy")[renno]* (2023, prototype): Built a Rust-to-JS compiler with name resolution and a type checker.
+- *#link("https://github.com/winstonyli/renno-legacy")[renno]* (2023, prototype): Developed a Rust-to-JS compiler with name resolution and a type checker.
 ]
 
 #let project-order = if is-phd {
