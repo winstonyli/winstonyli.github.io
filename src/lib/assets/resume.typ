@@ -73,7 +73,7 @@ and
 *#link("https://github.com/winstonyli/tatic")[tatic]* #sym.bullet _Rust, WebAssembly, dependent type theory_ #h(1fr) Mar 2026 -- Present
 - Engineering a *JIT* for a higher-order language, caching compiled *WebAssembly* by content hash.
 - Gating installation on agreement with an interpreter and a *kernel-checked proof* of the compiler model; unprovable terms stay interpreted.
-- Writing an independent checker replaying the specializer, and translation validation from the IR.
+- Developing an independent checker replaying the specializer, and translation validation from the IR.
 - Fuzzing the JIT against the interpreter: 1000 seeds $times$ 12 trials, zero mismatches, planted bugs caught.
 - Mining rewrite rules from laws the prover couldn't close; seeded libraries need 3--5$times$ fewer machine proofs (one theory).
 ]
@@ -104,7 +104,7 @@ and
 
 #let plumb = [
 *plumb* #sym.bullet _Rust, Windows, NTFS_
-- Writing a disk-usage analyzer that reads the *NTFS MFT* to scan a 4.3M-node volume in under 10 s.
+- Making a disk-usage analyzer that reads the *NTFS MFT* to scan a 4.3M-node volume in under 10 s.
 - Integrating live updates from the NTFS change journal and a partial tree while scanning; 200+ tests.
 ]
 
