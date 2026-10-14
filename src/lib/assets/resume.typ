@@ -127,7 +127,7 @@ and
 #let project-order = if is-phd {
     (tatic, lambast, renno, cereal)
 } else {
-    (manifold, scratchtape, compilers, plumb, arrow-game)
+    (compilers, scratchtape, manifold, plumb, arrow-game)
 }
 
 #for project in project-order [
